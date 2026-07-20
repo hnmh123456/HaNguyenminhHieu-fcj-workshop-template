@@ -1,6 +1,6 @@
 ---
 title : "Giám sát & Logging"
-date : 2024-01-01
+date: 2026-07-12
 weight : 7
 chapter : false
 pre : " <b> 5.5b. </b> "
@@ -38,3 +38,4 @@ Thiết lập giám sát và logging để theo dõi trạng thái ứng dụng 
 - Kiểm tra dashboard CloudWatch định kỳ.
 
 Note (hình ảnh): Thêm ảnh `cloudwatch-alarms.png` vào `images/5-Workshop/5.5b-Monitoring/`.
+

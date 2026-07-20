@@ -1,6 +1,6 @@
 ---
 title : "Tạo CodePipeline trên AWS Console"
-date : 2024-01-01
+date: 2026-07-12
 weight : 5
 chapter : false
 pre : " <b> 5.5. </b> "
@@ -40,3 +40,4 @@ Thiết lập CodePipeline trên AWS Console để kết nối GitHub, build và
 - Thêm kiểm thử và giám sát để pipeline hoạt động toàn diện.
 
 Note (hình ảnh): Chụp màn hình `Create pipeline` và `Connection ARN` vào `images/5-Workshop/5.5-Policy/`.
+

@@ -1,5 +1,5 @@
 ---
-date: 2016-04-09T16:50:16+02:00
+date: 2026-07-12
 title: Style customization
 weight: 25
 ---
@@ -208,3 +208,4 @@ Then, set the `themeVariant` value with the name of your custom theme file. That
   # Change default color scheme with a variant one. Can be "red", "blue", "green".
   themeVariant = "mine"
 ```
+

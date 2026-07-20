@@ -1,6 +1,6 @@
 ---
 title : "Kiểm thử và Pipeline Testing"
-date : 2024-01-01
+date: 2026-07-12
 weight : 6
 chapter : false
 pre : " <b> 5.5a. </b> "
@@ -60,3 +60,4 @@ phases:
 - Test fail: pipeline dừng và báo lỗi.
 
 Note (hình ảnh): Thêm ảnh `test-run.png` vào `images/5-Workshop/5.5a-Testing/`.
+

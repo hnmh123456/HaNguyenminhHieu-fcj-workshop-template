@@ -1,13 +1,11 @@
 ---
 title: "Worklog Tuần 1"
-date: 2026-04-20
+date: 2026-07-12
 weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+
 
 ### Mục tiêu tuần 1:
 
@@ -51,3 +49,5 @@ pre: " <b> 1.1. </b> "
   
 
 * Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
+
+

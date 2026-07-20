@@ -1,6 +1,6 @@
 ---
 title : "Cấu hình Repository và Stage"
-date : 2024-01-01 
+date: 2026-07-12
 weight : 4 
 chapter : false
 pre : " <b> 5.4. </b> "
@@ -45,3 +45,4 @@ git push origin main
 ```
 
 Note (hình ảnh): Thêm ảnh `pipeline file list` và `samconfig preview` vào `images/5-Workshop/5.4-S3-onprem/pipeline-files.svg`.
+

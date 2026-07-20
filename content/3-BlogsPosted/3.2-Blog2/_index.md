@@ -26,7 +26,7 @@ AWS just announced an architecture combining Amazon Bedrock Data Automation and 
 FHIR is the international standard for healthcare systems to exchange data with one another. Simply put: it is like a "common language" that every hospital software in the world understands. When patient data is stored in the FHIR standard, any system — whether from Hospital A or Clinic B — can read and use it seamlessly.
 
 #### How does the entire pipeline work?
-<img width="865" height="359" alt="image" src="https://github.com/user-attachments/assets/f8bf8baa-8d1b-4580-b23e-56d84e9fcfaf" />
+![Ảnh 1](/images/3-Blogs/blog2-1.png)
 
 The workflow runs fully autonomously through sequential event triggers:
 
@@ -48,15 +48,21 @@ The workflow runs fully autonomously through sequential event triggers:
 #### What does the actual system output look like?
 Here is an example of an actual output from the system after processing a sample medical record:
 
-<img width="865" height="550" alt="image" src="https://github.com/user-attachments/assets/ed85b62e-516a-4763-a13a-791f4f55093c" />
+![Ảnh 2](/images/3-Blogs/blog2-2.png)
 
 *“All the above information was extracted automatically from a scanned PDF file — within 2 to 3 minutes.”*
 
 #### Cost metrics to run this infrastructure
 AWS published a granular cost estimation modeled against a processing volume of roughly 100 documents per month:
 
-<img width="865" height="445" alt="image" src="https://github.com/user-attachments/assets/2f73776b-ad02-49f0-854f-837a4d75d8f4" />
-
+| Service | Usage | Estimated monthly cost |
+| :--- | :--- | :--- |
+| Amazon Bedrock Data Automation | 100 pages (approximately \$0.20–\$0.30/page) | \$20–\$30 |
+| AWS HealthLake | 5 GB storage + 100 queries | \$15–\$20 |
+| AWS Lambda | 200 invocations (512 MB, approximately 30s avg) | \$5–\$10 |
+| Amazon S3 | 1 GB storage + 200 requests | \$1–\$2 |
+| AWS KMS | 1 customer managed key | \$1 |
+| **Total approximately** | | **\$50–\$100/month** |
 
 “At a larger volume — 10,000 records/month — infrastructure operating costs reach around \$2,000–\$3,000. Whether this is expensive or cost-effective depends on benchmarking it directly against human manual data-entry labor costs.”
 

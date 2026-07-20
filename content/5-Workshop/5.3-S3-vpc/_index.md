@@ -1,6 +1,6 @@
 ---
 title : "Initialize SAM Pipeline"
-date : 2024-01-01 
+date: 2026-07-12
 weight : 3
 chapter : false
 pre : " <b> 5.3. </b> "
@@ -63,3 +63,4 @@ git push origin main
 ```
 
 Note: Add a placeholder image for the init flow in `images/5-Workshop/5.3-S3-vpc/sam-init.svg`.
+

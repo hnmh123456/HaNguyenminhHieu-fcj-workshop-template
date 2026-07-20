@@ -1,14 +1,12 @@
 ---
 title: "Các bài blogs đã đăng"
-date: 2024-01-01
+date: 2026-07-12
 weight: 3
 chapter: false
 pre: " <b> 3. </b> "
 ---
 
-{{% notice warning %}}  
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+
 
 Tại đây là phần liệt kê và giới thiệu các blog mà tôi đã đăng trên [AWS Study Group](https://www.facebook.com/groups/awsstudygroupfcj).
 
@@ -20,3 +18,4 @@ Blog này mô tả cách các dịch vụ của AWS như Amazon Bedrock Data Aut
 
 ### [Blog 3 - Cách AWS tối ưu hóa AI cho robot tự hành hoạt động ngoài thực địa](3.3-Blog3/)
 Blog này cho thấy cách Aigen sử dụng AWS SageMaker AI, tự động gán nhãn dữ liệu, học tích cực và distillation mô hình để triển khai các mô hình AI nhẹ và thích nghi trên robot nông nghiệp hoạt động trong môi trường thực tế.
+

@@ -1,6 +1,6 @@
 ---
 title : "Workshop Overview"
-date : 2024-01-01 
+date: 2026-07-12
 weight : 1
 chapter : false
 pre : " <b> 5.1. </b> "
@@ -38,3 +38,4 @@ The GameHub sample is a serverless app with:
 - Verify your AWS profile and region before running SAM commands.
 
 Note: Add an architecture diagram here to make the workflow clearer. Placeholder: `images/5-Workshop/5.1-Workshop-overview/gamehub-architecture.svg`.
+

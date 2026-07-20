@@ -1,13 +1,11 @@
 ---
 title: "Week 9 Worklog"
-date: 2026-06-15
+date: 2026-07-12
 weight: 9
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
+
 
 
 ### Week 9 Objectives:
@@ -44,3 +42,4 @@ pre: " <b> 1.9. </b> "
 
 * Recognized resource allocation responsibilities by completing cleanup procedures to preserve account credit.
 * ...
+

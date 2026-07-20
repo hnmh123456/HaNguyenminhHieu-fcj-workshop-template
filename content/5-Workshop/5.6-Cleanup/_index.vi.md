@@ -1,6 +1,6 @@
 ---
 title : "Triển khai Frontend với AWS Amplify"
-date : 2024-01-01
+date: 2026-07-12
 weight : 8
 chapter : false
 pre : " <b> 5.6. </b> "
@@ -79,3 +79,4 @@ Thêm biến sau trong Amplify Console:
 - Mỗi lần push lên branch deploy sẽ kích hoạt build tự động.
 
 Note (hình ảnh): Thêm ảnh `amplify-setup.png` vào `images/5-Workshop/5.6-Cleanup/amplify-setup.svg`.
+

@@ -1,13 +1,11 @@
 ---
 title: "Worklog Tuần 9"
-date: 2026-06-15
+date: 2026-07-12
 weight: 9
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+
 
 
 ### Mục tiêu tuần 9:
@@ -43,3 +41,4 @@ pre: " <b> 1.9. </b> "
 
 * Hiểu rõ tầm quan trọng của việc thu hồi tài nguyên thực hành (RDS snapshot/termination) để tối ưu hóa hạn mức tài khoản.
 * ...
+

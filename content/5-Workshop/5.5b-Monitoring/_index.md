@@ -1,6 +1,6 @@
 ---
 title : "Monitoring & Logging"
-date : 2024-01-01
+date: 2026-07-12
 weight : 7
 chapter : false
 pre : " <b> 5.5b. </b> "
@@ -38,3 +38,4 @@ Set up monitoring so you can observe GameHub application health after deployment
 - Review the CloudWatch dashboard regularly.
 
 Note: Add a placeholder image for CloudWatch alarms in `images/5-Workshop/5.5b-Monitoring/cloudwatch-alarms.svg`.
+

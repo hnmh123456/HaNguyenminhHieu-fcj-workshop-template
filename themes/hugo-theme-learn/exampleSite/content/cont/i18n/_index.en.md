@@ -1,5 +1,5 @@
 ---
-date: 2016-04-09T16:50:16+02:00
+date: 2026-07-12
 title: Multilingual and i18n
 weight: 30
 ---
@@ -76,3 +76,4 @@ Just set `disableLanguageSwitchingButton=true` in your `config.toml`
 ```
 
 ![I18n menu](/en/cont/i18n/images/i18n-menu.gif)
+

@@ -1,13 +1,11 @@
 ---
 title: "Worklog Tuần 5"
-date: 2026-05-18
+date: 2026-07-12
 weight: 5
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+
 
 ### Mục tiêu tuần 5:
 
@@ -46,3 +44,4 @@ pre: " <b> 1.5. </b> "
 
 * Chứng minh được tính linh hoạt và khả năng chịu lỗi (fault-tolerance) của ứng dụng web.
 * ...
+

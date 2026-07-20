@@ -1,13 +1,11 @@
 ---
 title: "Week 10 Worklog"
-date: 2026-06-22
+date: 2026-07-12
 weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
+
 
 
 ### Week 10 Objectives:
@@ -42,3 +40,4 @@ pre: " <b> 1.10. </b> "
   * Handled Launch Templates to provide consistent runtime environments for newly generated instances.
   * Analyzed hardware utilization thresholds (CPU/RAM metrics) required to trigger proper capacity expansions.
 * ...
+

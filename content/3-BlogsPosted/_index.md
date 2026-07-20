@@ -1,14 +1,12 @@
 ---
 title: "Blogs Posted"
-date: 2024-01-01
+date: 2026-07-12
 weight: 3
 chapter: false
 pre: " <b> 3. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
+
 
 This section lists and introduces the blogs I have posted to [AWS Study Group](https://www.facebook.com/groups/awsstudygroupfcj).
 
@@ -20,3 +18,4 @@ This blog describes how AWS services such as Amazon Bedrock Data Automation and 
 
 ### [Blog 3 - How AWS Optimizes AI for Autonomous Robots in the Field](3.3-Blog3/)
 This blog highlights how Aigen uses AWS SageMaker AI, auto-labeling, active learning, and model distillation to deploy lightweight and adaptive AI models on agricultural robots operating in real-world environments.
+

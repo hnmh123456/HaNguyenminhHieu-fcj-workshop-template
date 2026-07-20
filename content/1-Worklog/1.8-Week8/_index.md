@@ -1,13 +1,11 @@
 ---
 title: "Week 8 Worklog"
-date: 2026-06-08
+date: 2026-07-12
 weight: 8
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
+
 
 
 ### Week 8 Objectives:
@@ -40,3 +38,4 @@ pre: " <b> 1.8. </b> "
 * Grasped backend administrative features surrounding managed automated backup procedures (Automated Snapshots).
 * Created a clean logical data schema defining entity relationships clearly before physical deployment workflows.
 * ...
+

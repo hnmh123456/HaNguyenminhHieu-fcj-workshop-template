@@ -1,13 +1,11 @@
 ---
 title: "Week 7 Worklog"
-date: 2026-06-01
+date: 2026-07-12
 weight: 7
 chapter: false
 pre: " <b> 1.7. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
+
 
 
 ### Week 7 Objectives:
@@ -44,3 +42,4 @@ pre: " <b> 1.7. </b> "
 
 * Acquired system analysis capabilities to ensure web items are cached correctly and load smoothly over secure domain lines.
 * ...
+

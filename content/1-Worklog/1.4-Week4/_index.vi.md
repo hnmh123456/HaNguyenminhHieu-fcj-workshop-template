@@ -1,13 +1,11 @@
 ---
 title: "Worklog Tuần 4"
-date: 2026-05-11
+date: 2026-07-12
 weight: 4
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+
 
 ### Mục tiêu tuần 4:
 
@@ -46,3 +44,4 @@ pre: " <b> 1.4. </b> "
 
 * Tự tay thực thi các truy vấn SQL cơ bản trên hệ thống DB đám mây được quản lý.
 * ...
+

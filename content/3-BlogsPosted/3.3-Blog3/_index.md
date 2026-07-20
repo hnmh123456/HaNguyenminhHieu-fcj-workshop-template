@@ -1,13 +1,11 @@
 ---
 title: "Blog 3: How AWS optimizes AI for autonomous robots in the field"
-date: 2026-07-08
+date: 2026-07-12
 weight: 3
 chapter: false
 pre: " <b> 3.3. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference only, please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
+
 
 # HOW AWS OPTIMIZES AI FOR AUTONOMOUS ROBOTS (CASE STUDY: AIGEN)
 
@@ -33,3 +31,4 @@ Key takeaways on how Aigen optimized with the AWS SageMaker ecosystem:
 *Note: Raw data from the robot is uploaded to S3 -> automatically labeled -> Retraining the model on the Cloud -> pushing the Edge update back to the field.*
 
 **Reference the original article on the AWS blog:** [How Aigen transformed agricultural robotics for sustainable farming with Amazon SageMaker AI](https://aws.amazon.com/blogs/architecture/how-aigen-transformed-agricultural-robotics-for-sustainable-farming-with-amazon-sagemaker-ai/)
+

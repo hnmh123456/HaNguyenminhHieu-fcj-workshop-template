@@ -1,6 +1,6 @@
 ---
 title : "Giới thiệu Workshop"
-date : 2024-01-01 
+date: 2026-07-12
 weight : 1
 chapter : false
 pre : " <b> 5.1. </b> "
@@ -38,3 +38,4 @@ GameHub được xây dựng như một ứng dụng serverless:
 - Kiểm tra profile và region AWS trước khi chạy lệnh SAM.
 
 Note (hình ảnh): Chèn ảnh mô hình kiến trúc hệ thống tại vị trí này để trực quan. Thư mục placeholder: `images/5-Workshop/5.1-Workshop-overview/gamehub-architecture.svg`.
+

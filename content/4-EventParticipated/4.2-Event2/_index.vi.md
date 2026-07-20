@@ -1,125 +1,77 @@
 ---
-title: "Event 2"
-date: 2024-01-01
-weight: 1
-chapter: false
-pre: " <b> 4.2. </b> "
+title : "Sự kiện 2: FCAJ Community Day - June 2026"
+date : 2026-06-27
+weight : 3
+chapter : false
+pre : " <b> 4.3. </b> "
 ---
-
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
-# Bài thu hoạch “GenAI-powered App-DB Modernization workshop”
 
 ### Mục Đích Của Sự Kiện
 
-- Chia sẻ best practices trong thiết kế ứng dụng hiện đại
-- Giới thiệu phương pháp DDD và event-driven architecture
-- Hướng dẫn lựa chọn compute services phù hợp
-- Giới thiệu công cụ AI hỗ trợ development lifecycle
+- **Cập nhật xu hướng & Chia sẻ góc nhìn thực tế:** Mang đến cho cộng đồng kỹ sư và sinh viên ngành IT góc nhìn thực tế từ môi trường doanh nghiệp về cách các tập đoàn đang áp dụng AI vào mọi phòng ban để giải quyết bài toán nợ công nghệ (Technical Debt)[cite: 184].
+- **Tối ưu hóa quy trình kỹ thuật & Vận hành:** Giới thiệu các phương pháp hiện đại hóa ứng dụng thông qua kiến trúc Agent (Single-Agent, Multi-Agent), nâng cao năng lực giám sát và tự động hóa xử lý sự cố hạ tầng Cloud (DevOps AI Agent)[cite: 185].
+- **Giải quyết bài toán bản địa hóa và bảo mật:** Hướng dẫn xây dựng Voice AI chuyên biệt cho tiếng Việt (xử lý bài toán ngôn ngữ vùng miền, ngữ cảnh đàm thoại) và phương án thiết lập hạ tầng kết nối an toàn (Private Security Connection), bảo vệ dữ liệu nội bộ doanh nghiệp[cite: 186].
+- **Định hướng nghề nghiệp:** Giúp nhân sự công nghệ định hình lộ trình phát triển (Career Path), kết nối sớm với môi trường doanh nghiệp và chuẩn bị bộ kỹ năng cần thiết để làm việc cộng tác hiệu quả với AI[cite: 187].
 
 ### Danh Sách Diễn Giả
 
-- **Jignesh Shah** - Director, Open Source Databases
-- **Erica Liu** - Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** - Assc. Specialist SA, Serverless Amazon Web Services
+- **Anh Steve Trần** – Founder & CEO tại Cloud Thinker (Cựu Solution Architect tại Amazon Web Services)[cite: 189].
+- **Anh Hiếu Nghị** – Đại diện từ Renova Cloud[cite: 190].
+- **Anh Kiệt** – Đại diện từ cộng đồng AWS Student Builder Group[cite: 191].
+- **Anh Trung Nguyễn** – Founder & CEO tại R AI (Chuyên gia cung cấp giải pháp AI Agent cho các ngân hàng lớn như VPBank, VIB)[cite: 192].
+- **Chị Bảo & Anh Nguyên Nguyễn** – Các kỹ sư điện toán đám mây (Cloud Engineer) đến từ team Cloud Kinetics[cite: 193].
+- **Anh Trường (Wren) & Chị Minh Anh** – Các chuyên gia giải pháp AI (AI Solution Specialists) đến từ Noventic[cite: 194].
+- **Anh Toàn Nguyễn** – Chuyên gia bảo mật đám mây (AWS Security Builder)[cite: 195].
 
 ### Nội Dung Nổi Bật
 
-#### Đưa ra các ảnh hưởng tiêu cực của kiến trúc ứng dụng cũ
+#### 1. Xu hướng Kiến trúc Agent trong Doanh nghiệp (Cloud Thinker)
+- Phân tích sự đánh đổi chi phí và hiệu năng giữa kiến trúc Single-Agent (Super Agent) và Multi-Agent (Specialist Agents)[cite: 198].
+- Cách AI hỗ trợ đắc lực cho con người trong vận hành hạ tầng sản xuất (Production Environment), tối ưu chi phí (FinOps), kiểm soát chất lượng mã nguồn (Code Reviews) và tự động hóa kiểm thử an ninh mạng (Penetration Testing)[cite: 199].
 
-- Thời gian release sản phẩm lâu → Mất doanh thu/bỏ lỡ cơ hội
-- Hoạt động kém hiệu quả → Mất năng suất, tốn kém chi phí
-- Không tuân thủ các quy định về bảo mật → Mất an ninh, uy tín
+#### 2. Công nghệ Voice AI Agent cho Tiếng Việt (R AI & Renova Cloud)
+Giải bài toán tiếng Việt là ngôn ngữ ít tài nguyên (Low-resource language) bằng mô hình tích hợp 3 thành phần[cite: 201]:
 
-#### Chuyển đổi sang kiến trúc ứng dụng mới - Microservice Architecture
+<div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px; margin: 20px 0; font-weight: bold; font-size: 0.95em;">
+  <div style="background-color: #fff7ed; color: #9a3412; padding: 8px 12px; border-radius: 6px; border: 1px solid #ffedd5;">Speech-to-Text (STT)</div>
+  <div style="color: #9a3412; font-size: 1.2em;">&rarr;</div>
+  <div style="background-color: #fff7ed; color: #9a3412; padding: 8px 12px; border-radius: 6px; border: 1px solid #ffedd5;">LLM xử lý ngữ cảnh</div>
+  <div style="color: #9a3412; font-size: 1.2em;">&rarr;</div>
+  <div style="background-color: #fff7ed; color: #9a3412; padding: 8px 12px; border-radius: 6px; border: 1px solid #ffedd5;">Text-to-Speech (TTS)</div>
+</div>
 
-Chuyển đổi thành hệ thống modular – từng chức năng là một **dịch vụ độc lập** giao tiếp với nhau qua **sự kiện** với 3 trụ cột cốt lõi:
+- Xử lý các chi tiết tương tác nâng cao trong thực tế của ngành Ngân hàng: Nhận diện giới tính để xưng hô (Anh/Chị), thuật toán nhận biết điểm dừng để ngắt lời tự nhiên, và tích hợp gọi công cụ (Tool Calling) để tự động thực hiện tác vụ phức tạp (như khóa thẻ ngân hàng)[cite: 202].
 
-- **Queue Management**: Xử lý tác vụ bất đồng bộ
-- **Caching Strategy:** Tối ưu performance
-- **Message Handling:** Giao tiếp linh hoạt giữa services
+#### 3. Hạ tầng DevOps AI Agent (Cloud Kinetics)
+- Giới thiệu 6 trụ cột cốt lõi của DevOps Agent giúp tự động hóa quá trình điều tra nguyên nhân gốc rễ (Root Cause Analysis - RCA) khi có cảnh báo (Alert/Incident) xảy ra[cite: 204].
+- Mô phỏng case-study thực tế: Hệ thống e-commerce bị tấn công giả lập DDoS làm tăng latency lên 12 giây[cite: 205]. DevOps Agent tự động quét toàn bộ sơ đồ phân tách hệ thống (Topology Graph) gồm gần 300 liên kết, định vị chính xác nguồn lỗi và xuất mã lệnh xử lý giúp khôi phục ứng dụng chỉ trong vài phút[cite: 206].
 
-#### Domain-Driven Design (DDD)
-
-- **Phương pháp 4 bước**: Xác định domain events → sắp xếp timeline → identify actors → xác định bounded contexts
-- **Case study bookstore**: Minh họa cách áp dụng DDD thực tế
-- **Context mapping**: 7 patterns tích hợp bounded contexts
-
-#### Event-Driven Architecture
-
-- **3 patterns tích hợp**: Publish/Subscribe, Point-to-point, Streaming
-- **Lợi ích**: Loose coupling, scalability, resilience
-- **So sánh sync vs async**: Hiểu rõ trade-offs (sự đánh đổi)
-
-#### Compute Evolution
-
-- **Shared Responsibility Model**: Từ EC2 → ECS → Fargate → Lambda
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value
-- **Functions vs Containers**: Criteria lựa chọn phù hợp
-
-#### Amazon Q Developer
-
-- **SDLC automation**: Từ planning đến maintenance
-- **Code transformation**: Java upgrade, .NET modernization
-- **AWS Transform agents**: VMware, Mainframe, .NET migration
+#### 4. Ứng dụng Quản trị Nhân sự & Bảo mật Kết nối Tư nhân (Noventic)
+- Sử dụng Amazon Q/Quick thiết lập các kỹ năng (Skills) tự động phân tích hàng loạt CV, chấm điểm mức độ tương thích phù hợp với khung JD để giảm tải quy trình sàng lọc thủ công[cite: 208].
+- **Giải pháp kỹ thuật nâng cao:** Đặt MCP Server trong Private Subnet, sử dụng Interface Endpoint kết nối thông qua mạng nội bộ AWS, tích hợp AWS Secret Manager và Route 53 Resolver nhằm triệt tiêu hoàn toàn rủi ro lộ bề mặt tấn công internet hoặc tấn công trung gian (Man-in-the-middle)[cite: 209].
 
 ### Những Gì Học Được
 
-#### Tư Duy Thiết Kế
+#### Mindset Kỹ Sư Hiện Đại
+- **AI là đòn bẩy:** Chuyên môn vững chắc là cốt lõi, AI đóng vai trò là trợ lý đắc lực hỗ trợ đòn bẩy để khuếch đại năng suất chứ không thay thế hoàn toàn con người[cite: 218].
 
-- **Business-first approach**: Luôn bắt đầu từ business domain, không phải technology
-- **Ubiquitous language**: Importance của common vocabulary giữa business và tech teams
-- **Bounded contexts**: Cách identify và manage complexity trong large systems
+#### Kỹ Trị và Bảo Mật
+- **Hạ tầng bền vững:** Chú trọng tính hoàn thiện của hệ thống quản trị dữ liệu (Governance), tính hệ thống rõ ràng (Observability) và bảo mật kết nối nội bộ cô lập qua Private VPC Connection[cite: 219].
 
-#### Kiến Trúc Kỹ Thuật
+#### Chiến Lược Chủ Động
+- **Phát triển nghề nghiệp:** Chủ động dấn thân va chạm thực tế qua các kỳ thực tập doanh nghiệp sớm và tối ưu hồ sơ năng lực (CV) bám sát các keyword kỹ thuật để đáp ứng xu hướng công nghệ tuyển dụng mới[cite: 220].
 
-- **Event storming technique**: Phương pháp thực tế để mô hình hóa quy trình kinh doanh
-- Sử dụng **Event-driven communication** thay vì synchronous calls
-- **Integration patterns**: Hiểu khi nào dùng sync, async, pub/sub, streaming
-- **Compute spectrum**: Criteria chọn từ VM → containers → serverless
+### Trải Nghiệm Trong Event
 
-#### Chiến Lược Hiện Đại Hóa
+Tham gia hội thảo **“FCAJ Community Day - June 2026”** mang lại chuỗi trải nghiệm thực tế và chuyên sâu[cite: 178, 210]:
 
-- **Phased approach**: Không rush, phải có roadmap rõ ràng
-- **7Rs framework**: Nhiều con đường khác nhau tùy thuộc vào đặc điểm của mỗi ứng dụng
-- **ROI measurement**: Cost reduction + business agility
-
-### Ứng Dụng Vào Công Việc
-
-- **Áp dụng DDD** cho project hiện tại: Event storming sessions với business team
-- **Refactor microservices**: Sử dụng bounded contexts để identify service boundaries
-- **Implement event-driven patterns**: Thay thế một số sync calls bằng async messaging
-- **Serverless adoption**: Pilot AWS Lambda cho một số use cases phù hợp
-- **Try Amazon Q Developer**: Integrate vào development workflow để boost productivity
-
-### Trải nghiệm trong event
-
-Tham gia workshop **“GenAI-powered App-DB Modernization”** là một trải nghiệm rất bổ ích, giúp tôi có cái nhìn toàn diện về cách hiện đại hóa ứng dụng và cơ sở dữ liệu bằng các phương pháp và công cụ hiện đại. Một số trải nghiệm nổi bật:
-
-#### Học hỏi từ các diễn giả có chuyên môn cao
-- Các diễn giả đến từ AWS và các tổ chức công nghệ lớn đã chia sẻ **best practices** trong thiết kế ứng dụng hiện đại.
-- Qua các case study thực tế, tôi hiểu rõ hơn cách áp dụng **Domain-Driven Design (DDD)** và **Event-Driven Architecture** vào các project lớn.
-
-#### Trải nghiệm kỹ thuật thực tế
-- Tham gia các phiên trình bày về **event storming** giúp tôi hình dung cách **mô hình hóa quy trình kinh doanh** thành các domain events.
-- Học cách **phân tách microservices** và xác định **bounded contexts** để quản lý sự phức tạp của hệ thống lớn.
-- Hiểu rõ trade-offs giữa **synchronous và asynchronous communication** cũng như các pattern tích hợp như **pub/sub, point-to-point, streaming**.
-
-#### Ứng dụng công cụ hiện đại
-- Trực tiếp tìm hiểu về **Amazon Q Developer**, công cụ AI hỗ trợ SDLC từ lập kế hoạch đến maintenance.
-- Học cách **tự động hóa code transformation** và pilot serverless với **AWS Lambda**, từ đó nâng cao năng suất phát triển.
-
-#### Kết nối và trao đổi
-- Workshop tạo cơ hội trao đổi trực tiếp với các chuyên gia, đồng nghiệp và team business, giúp **nâng cao ngôn ngữ chung (ubiquitous language)** giữa business và tech.
-- Qua các ví dụ thực tế, tôi nhận ra tầm quan trọng của **business-first approach**, luôn bắt đầu từ nhu cầu kinh doanh thay vì chỉ tập trung vào công nghệ.
-
-#### Bài học rút ra
-- Việc áp dụng DDD và event-driven patterns giúp giảm **coupling**, tăng **scalability** và **resilience** cho hệ thống.
-- Chiến lược hiện đại hóa cần **phased approach** và đo lường **ROI**, không nên vội vàng chuyển đổi toàn bộ hệ thống.
-- Các công cụ AI như Amazon Q Developer có thể **boost productivity** nếu được tích hợp vào workflow phát triển hiện tại.
+- **Học hỏi từ các diễn giả có chuyên môn cao:** Tiếp thu những phân tích sâu sắc từ các chuyên gia đầu ngành về hành trình sự nghiệp thực tế, cách doanh nghiệp cân đối chi phí hạ tầng và câu chuyện tái cấu trúc nhân sự khi áp dụng GenAI[cite: 211].
+- **Trải nghiệm kỹ thuật thực tế:** Chứng kiến tận mắt các phiên Live Demo trực quan ngay tại sân khấu: từ việc nghe thử Voice AI xử lý đàm thoại tiếng Việt và tự động ngắt lời tự nhiên, cho đến quá trình DevOps Agent tự động cô lập lỗi hạ tầng và đề xuất mã lệnh xử lý khi hệ thống e-commerce bị tấn công DDoS[cite: 212].
+- **Ứng dụng công cụ hiện đại:** Tiếp cận và tìm hiểu sâu về các công cụ thế hệ mới thuộc hệ sinh thái AWS như Amazon Q, Amazon Quick và các bộ SDK hỗ trợ giao thức kết nối máy chủ MCP (Model Context Protocol)[cite: 213]. Học cách thiết lập các không gian logic (Agent Space) độc lập để phân quyền dữ liệu[cite: 214].
+- **Kết nối và trao đổi:** Cơ hội trải nghiệm không gian công nghệ hiện đại tại văn phòng AWS (tòa nhà Bitexco), gặp gỡ và giao lưu trực tiếp với các chuyên gia, đồng nghiệp[cite: 215]. Thảo luận sôi nổi về bài toán chi phí truyền tải dữ liệu (Data Transfer Cost) và cách tối ưu hóa cửa sổ ngữ cảnh (Context Window)[cite: 216].
 
 #### Một số hình ảnh khi tham gia sự kiện
-* Thêm các hình ảnh của các bạn tại đây
-> Tổng thể, sự kiện không chỉ cung cấp kiến thức kỹ thuật mà còn giúp tôi thay đổi cách tư duy về thiết kế ứng dụng, hiện đại hóa hệ thống và phối hợp hiệu quả hơn giữa các team.
+![Ảnh 1](/images/4-Events/Event2.jpg)
+
+
+> **Tổng kết:** Sự kiện này đã giúp tôi củng cố tư duy kỹ trị và bảo mật cần có của một Solutions Architect tương lai, hiểu rõ cách vận hành hệ thống DevOps Agent thực tế cũng như phương thức thiết kế kết nối bảo mật cô lập cho doanh nghiệp.

@@ -1,6 +1,6 @@
 ---
 title : "Configure Repository and Stage"
-date : 2024-01-01 
+date: 2026-07-12
 weight : 4
 chapter : false
 pre : " <b> 5.4. </b> "
@@ -45,3 +45,4 @@ git push origin main
 ```
 
 Note: Add placeholder images for the pipeline file list and samconfig preview in `images/5-Workshop/5.4-S3-onprem/pipeline-files.svg`.
+

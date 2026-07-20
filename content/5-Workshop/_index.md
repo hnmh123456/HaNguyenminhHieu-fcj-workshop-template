@@ -1,13 +1,11 @@
 ---
 title: "Workshop"
-date: 2024-01-01
+date: 2026-07-12
 weight: 5
 chapter: false
 pre: " <b> 5. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
+
 
 #### Workshop summary
 
@@ -30,3 +28,5 @@ This workshop teaches you how to build an end-to-end CI/CD workflow for the Game
 You will work with a sample GameHub app composed of:
 1. backend serverless services managed by SAM,
 2. a static frontend hosted by AWS Amplify.
+
+

@@ -7,9 +7,7 @@ chapter: false
 pre: " <b> 5. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+
 
 
 # Thiết lập CI/CD với AWS SAM, AWS CodePipeline và AWS Amplify
@@ -34,3 +32,4 @@ Trong workshop này, bạn sẽ học cách:
 '''
 Path('content/5-Workshop/_index.vi.md').write_text(content, encoding='utf-8')
 print('wrote content/5-Workshop/_index.vi.md')
+

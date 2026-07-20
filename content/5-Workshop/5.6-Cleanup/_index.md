@@ -1,6 +1,6 @@
 ---
 title : "Deploy Frontend with AWS Amplify"
-date : 2024-01-01
+date: 2026-07-12
 weight : 8
 chapter : false
 pre : " <b> 5.6. </b> "
@@ -79,3 +79,4 @@ Add these Amplify environment variables:
 - Every push to the deploy branch triggers a build.
 
 Note: Add a placeholder image for Amplify setup in `images/5-Workshop/5.6-Cleanup/amplify-setup.svg`.
+

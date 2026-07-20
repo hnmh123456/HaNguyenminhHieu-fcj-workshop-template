@@ -1,13 +1,11 @@
 ---
 title: "Proposal"
-date: 2024-01-01
+date: 2026-07-12
 weight: 2
 chapter: false
 pre: " <b> 2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
+
 
 In this section, you need to summarize the contents of the workshop that you **plan** to conduct.
 
@@ -113,3 +111,4 @@ Scalable to 10-15 stations.
 #### Long-term Value
 1-year data foundation for AI research.  
 Reusable for future projects.
+

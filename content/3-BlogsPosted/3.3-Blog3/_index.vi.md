@@ -1,13 +1,11 @@
 ---
 title: "Blog 3: Cách AWS tối ưu hóa AI cho robot tự hành ngoài thực tế"
-date: 2026-07-08
+date: 2026-07-12
 weight: 3
 chapter: false
 pre: " <b> 3.3. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+
 
 # CÁCH AWS TỐI ƯU HÓA AI CHO ROBOT TỰ HÀNH (CASE STUDY: AIGEN)
 
@@ -33,3 +31,4 @@ Các điểm chính cần nắm về cách Aigen tối ưu hóa với hệ sinh 
 *Chú thích: Dữ liệu thô từ robot tải lên S3 -> tự động gán nhãn -> Train lại mô hình trên Cloud -> đẩy bản cập nhật Edge về cánh đồng.*
 
 **Tham khảo bài viết gốc trên blog AWS:** [How Aigen transformed agricultural robotics for sustainable farming with Amazon SageMaker AI](https://aws.amazon.com/blogs/architecture/how-aigen-transformed-agricultural-robotics-for-sustainable-farming-with-amazon-sagemaker-ai/)
+

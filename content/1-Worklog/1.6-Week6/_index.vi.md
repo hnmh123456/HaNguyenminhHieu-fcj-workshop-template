@@ -1,13 +1,11 @@
 ---
 title: "Worklog Tuần 6"
-date: 2026-05-25
+date: 2026-07-12
 weight: 6
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+
 
 
 ### Mục tiêu tuần 6:
@@ -45,3 +43,4 @@ pre: " <b> 1.6. </b> "
 * Nắm vững cách phân cấp và thực thi quyền hạn truy cập an toàn bảo mật:
   * Thiết lập S3 Bucket Policies áp dụng trực tiếp cho tài nguyên chứa
   * Kết hợp IAM Policies phân quyền chi tiết cho định danh người dùng
+

@@ -1,6 +1,6 @@
 ---
 title : "Prerequisites"
-date : 2024-01-01 
+date: 2026-07-12
 weight : 2
 chapter : false
 pre : " <b> 5.2. </b> "
@@ -64,3 +64,4 @@ aws configure --profile gamehub
 - Create profile aliases like `gamehub-dev` and `gamehub-prod` for multiple environments.
 
 Note: Add a screenshot of `aws configure` and `sam --version` output in `images/5-Workshop/5.2-Prerequiste/aws-config.svg`.
+

@@ -1,13 +1,11 @@
 ---
 title: "Worklog Tuần 11"
-date: 2026-06-29
+date: 2026-07-12
 weight: 11
 chapter: false
 pre: " <b> 1.11. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+
 
 
 ### Mục tiêu tuần 11:
@@ -43,3 +41,4 @@ pre: " <b> 1.11. </b> "
 
 * Nắm rõ quy trình thu hồi hệ thống co giãn phức tạp để tối ưu hạn mức sử dụng.
 * ...
+

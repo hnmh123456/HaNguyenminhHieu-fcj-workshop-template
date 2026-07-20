@@ -1,13 +1,11 @@
 ---
 title: "Week 11 Worklog"
-date: 2026-06-29
+date: 2026-07-12
 weight: 11
 chapter: false
 pre: " <b> 1.11. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
+
 
 
 ### Week 11 Objectives:
@@ -44,3 +42,4 @@ pre: " <b> 1.11. </b> "
 
 * Formulated resource collection management procedures to terminate multi-tier scaling stacks cleanly.
 * ...
+

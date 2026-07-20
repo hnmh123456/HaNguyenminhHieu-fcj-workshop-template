@@ -1,6 +1,6 @@
 ---
-title: "ỨNG DỤNG GAMEHUB VỚI KIẾN TRÚC SERVERLESS"
-date: 2026-07-01
+title: "Bản đề xuất"
+date: 2024-01-01
 weight: 2
 chapter: false
 pre: "<b> 2. </b>"
@@ -27,36 +27,29 @@ Giải pháp tạo nền tảng cơ sở vững chắc cho một hệ thống ga
 
 ---
 
-### 3. Kiến trúc giải pháp
-Nền tảng áp dụng kiến trúc Serverless Game Topology để quản lý các phiên kết nối thời gian thực dài hạn từ client Flutter. Toàn bộ hạ tầng được định nghĩa bằng mã nguồn (IaC) thông qua AWS SAM template để đảm nhận tính đồng nhất.
+### 3. Kiến trúc giải pháp  
+Nền tảng áp dụng kiến trúc AWS Serverless để quản lý dữ liệu từ 5 trạm dựa trên Raspberry Pi, có thể mở rộng lên 15 trạm. Dữ liệu được tiếp nhận qua AWS IoT Core, lưu trữ trong S3 data lake và xử lý bởi AWS Glue Crawlers và ETL jobs để chuyển đổi và tải vào một S3 bucket khác cho mục đích phân tích. Lambda và API Gateway xử lý bổ sung, trong khi Amplify với Next.js cung cấp bảng điều khiển được bảo mật bởi Cognito.  
 
-#### Sơ đồ kiến trúc hệ thống
-Để sơ đồ hiển thị trực quan và thu hút trong tài liệu, hình ảnh kiến trúc được tích hợp trực tiếp bên dưới:
+![IoT Weather Station Architecture](/images/2-Proposal/edge_architecture.jpeg)
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/thienluhoan/fcj-workshop-template/main/images/edited.drawio.png" alt="AWS Serverless Game Architecture" width="100%">
-  <br>
-  <i>Hình 3.1: Sơ đồ kiến trúc Real-time Serverless Game Platform sử dụng AWS SAM và GitHub Actions</i>
-</p>
+![IoT Weather Platform Architecture](/images/2-Proposal/platform_architecture.jpeg)
 
-> **Lưu ý:** Bạn có thể thay đổi đường dẫn `src` ở trên thành link dẫn tới file ảnh trong kho lưu trữ GitHub chính thức của nhóm bạn sau khi hoàn tất đẩy mã nguồn lên (ví dụ: `../images/edited.drawio.png`).
+*Dịch vụ AWS sử dụng*  
+- *AWS IoT Core*: Tiếp nhận dữ liệu MQTT từ 5 trạm, mở rộng lên 15.  
+- *AWS Lambda*: Xử lý dữ liệu và kích hoạt Glue jobs (2 hàm).  
+- *Amazon API Gateway*: Giao tiếp với ứng dụng web.  
+- *Amazon S3*: Lưu trữ dữ liệu thô (data lake) và dữ liệu đã xử lý (2 bucket).  
+- *AWS Glue*: Crawlers lập chỉ mục dữ liệu, ETL jobs chuyển đổi và tải dữ liệu.  
+- *AWS Amplify*: Lưu trữ giao diện web Next.js.  
+- *Amazon Cognito*: Quản lý quyền truy cập cho người dùng phòng lab.  
 
-#### Dịch vụ AWS sử dụng
-* **AWS Amplify**: Lưu trữ và phân phối giao diện ứng dụng Flutter Web nhanh chóng qua hệ thống CDN toàn cầu.
-* **AWS Lambda**: Xử lý logic nghiệp vụ game, xác thực và phát (broadcast) sự kiện (Hệ thống gồm 4 hàm Node.js biệt lập).
-* **Amazon API Gateway**: Thiết lập cổng WebSocket API định tuyến chuẩn xác các gói tin dựa trên JSON action.
-* **Amazon DynamoDB**: Lưu trữ session kết nối người chơi và trạng thái các phòng game (2 bảng dữ liệu NoSQL tốc độ cao).
-* **Amazon Route 53 & AWS WAF**: Phân giải DNS Alias linh hoạt và thiết lập tường lửa biên ngăn chặn bot tấn công spam hoặc vượt giới hạn truy cập (Rate Limit).
-* **Amazon Cognito**: Quản lý quy trình đăng ký, đăng nhập và cấp mã token JWT an toàn để xác thực thông tin người chơi.
-* **Amazon CloudWatch**: Giám sát nhật ký (logs) toàn bộ hệ thống, giới hạn thời gian lưu trữ giúp tối ưu hóa chi phí phát sinh.
-
-#### Thiết kế thành phần
-* **Ứng dụng Client**: Ứng dụng xây dựng trên Flutter tích hợp bộ công cụ AWS Amplify SDK phục vụ luồng xác thực (Auth), thiết lập kết nối hai chiều trực tiếp bằng giao thức mạng mã hóa `wss://` đến cổng API Gateway.
-* **Tiếp nhận & Bảo mật biên**: Dịch vụ Route 53 điều phối toàn bộ lưu lượng truy cập qua bộ lọc an toàn AWS WAF, bảo vệ hệ thống trước khi chuyển tiếp gói tin kết nối đến bộ xác thực định danh Cognito Lambda Authorizer.
-* **Xử lý dữ liệu**: Các hàm AWS Lambda tiếp nhận tín hiệu sự kiện từ API Gateway, tự động ghi nhận mã kết nối vào bảng lưu trữ DynamoDB, thực thi toàn bộ logic trò chơi và gửi cập nhật trạng thái mới nhất tới phòng chơi.
-* **Lưu trữ dữ liệu**: Bảng dữ liệu `Connections` quản lý các phiên kết nối hiện hành (được cấu hình thêm chỉ mục Global Secondary Index dựa trên trường dữ liệu `roomId`); bảng `Games` đảm nhận cấu trúc ma trận trạng thái trận đấu. Cả hai bảng đều được kích hoạt thuộc tính TTL (Time to Live) để tự động xóa sạch dữ liệu lỗi thời hoặc rác hệ thống.
-
----
+*Thiết kế thành phần*  
+- *Thiết bị biên*: Raspberry Pi thu thập và lọc dữ liệu cảm biến, gửi tới IoT Core.  
+- *Tiếp nhận dữ liệu*: AWS IoT Core nhận tin nhắn MQTT từ thiết bị biên.  
+- *Lưu trữ dữ liệu*: Dữ liệu thô lưu trong S3 data lake; dữ liệu đã xử lý lưu ở một S3 bucket khác.  
+- *Xử lý dữ liệu*: AWS Glue Crawlers lập chỉ mục dữ liệu; ETL jobs chuyển đổi để phân tích.  
+- *Giao diện web*: AWS Amplify lưu trữ ứng dụng Next.js cho bảng điều khiển và phân tích thời gian thực.  
+- *Quản lý người dùng*: Amazon Cognito giới hạn 5 tài khoản hoạt động.  
 
 ### 4. Triển khai kỹ thuật
 
@@ -113,6 +106,6 @@ Bảng dự toán kinh phí vận hành hàng tháng dưới đây được tín
 
 ---
 
-### 8. Kết quả kỳ vọng
-* **Cải tiến kỹ thuật vượt trội**: Xây dựng thành công hệ thống trò chơi multiplayer thời gian thực chạy ổn định trên nền tảng kiến trúc Serverless tiên tiến dựa theo mô hình Event-driven, đạt toàn bộ các chứng chỉ về tiêu chuẩn vận hành an toàn bảo mật. Ứng dụng đảm bảo độ trễ thấp tối thiểu, triệt tiêu hoàn toàn điểm nghẽn hệ thống (Bottleneck) và có khả năng tự co giãn (Auto-scaling) linh hoạt theo số lượng người truy cập thực tế.
-* **Giá trị lâu dài đóng góp cho dự án**: Toàn bộ kho mã nguồn định nghĩa kiến trúc cơ sở hạ tầng (AWS SAM Template) cùng hệ thống kịch bản workflow tự động hóa CI/CD của GitHub Actions được chuẩn hóa, đóng gói bài bản và lưu trữ khoa học. Đây sẽ là nền tảng vững chắc giúp đội ngũ kỹ thuật dễ dàng phát triển, kế thừa và mở rộng quy mô các dự án game multiplayer lớn hơn trong tương lai.
+### 8. Kết quả kỳ vọng  
+*Cải tiến kỹ thuật*: Dữ liệu và phân tích thời gian thực thay thế quy trình thủ công. Có thể mở rộng tới 10–15 trạm.  
+*Giá trị dài hạn*: Nền tảng dữ liệu 1 năm cho nghiên cứu AI, có thể tái sử dụng cho các dự án tương lai.

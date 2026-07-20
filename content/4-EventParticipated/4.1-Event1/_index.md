@@ -146,6 +146,6 @@ Key experiential highlights include:
 - **Ecosystem Networking:** Engaging face-to-face with professional cloud engineers within the community, discussing methods to optimize actual corporate cloud billing footprints.
 
 #### Event Media Logs
-![Event Media Logs](/images/4-Events/Event1.jpeg)
+![Ảnh 1](/images/4-Events/Event1.jpg)
 
 > **Summary:** Ultimately, this workshop provided deep technical guidance and redefined my approach to building secure, modern cloud architectures. It reinforced the exact infrastructure patterns and edge security controls required for my professional path toward becoming a future Cloud Solutions Architect.

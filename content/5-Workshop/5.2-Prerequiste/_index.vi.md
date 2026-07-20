@@ -1,6 +1,6 @@
 ---
 title : "Chuẩn bị"
-date : 2024-01-01 
+date: 2026-07-12
 weight : 2
 chapter : false
 pre : " <b> 5.2. </b> "
@@ -64,3 +64,4 @@ aws configure --profile gamehub
 - Tạo profile `gamehub-dev` và `gamehub-prod` nếu bạn triển khai nhiều môi trường.
 
 Note (hình ảnh): Thêm ảnh `aws configure` và `sam --version` tại `images/5-Workshop/5.2-Prerequiste/aws-config.svg`.
+

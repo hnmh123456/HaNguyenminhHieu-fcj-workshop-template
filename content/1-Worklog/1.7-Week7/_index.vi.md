@@ -1,13 +1,11 @@
 ---
 title: "Worklog Tuần 7"
-date: 2026-06-01
+date: 2026-07-12
 weight: 7
 chapter: false
 pre: " <b> 1.7. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+
 
 
 ### Mục tiêu tuần 7:
@@ -43,3 +41,4 @@ pre: " <b> 1.7. </b> "
 
 * Đạt khả năng phân tích luồng mạng, đảm bảo tệp tin ứng dụng web được cache tối ưu và vận hành trơn tru qua link domain an toàn.
 * ...
+

@@ -57,6 +57,5 @@ A warning disclaimer
 
 renders as
 
-{{% notice warning %}}
-A warning disclaimer
-{{% /notice %}}
+
+

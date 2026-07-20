@@ -1,13 +1,11 @@
 ---
 title: "Week 12 Worklog"
-date: 2026-07-06
+date: 2026-07-12
 weight: 12
 chapter: false
 pre: " <b> 1.12. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
+
 
 
 ### Week 12 Objectives:
@@ -42,3 +40,4 @@ pre: " <b> 1.12. </b> "
   * Transformed raw text scripts into a finished documentation portal using the Hugo engine.
   * Deployed output files to public host channels, creating live URL endpoints to submit for formal internship evaluation.
 * ...
+

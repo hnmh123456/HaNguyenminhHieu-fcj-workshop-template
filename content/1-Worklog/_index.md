@@ -1,14 +1,12 @@
 ---
 title: "Worklog"
-date: 2026-04-20
+date: 2026-07-12
 weight: 1
 chapter: false
 pre: " <b> 1. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
+
 
 **On this page**, you will need to introduce your worklog. **How** did you complete it? How many weeks did you take to complete the program? **What** did you do in those weeks?
 
@@ -37,3 +35,4 @@ Typically, and as a standard, a worklog is carried out over about 3 months (thro
 **Week 11:** [Testing self-healing cloud clusters using cross-zone Auto Scaling Groups](1.11-week11/)
 
 **Week 12:** [Developing event-driven serverless architectures using AWS Lambda and CloudWatch](1.12-week12/)
+
