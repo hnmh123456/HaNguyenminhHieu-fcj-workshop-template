@@ -1,7 +1,7 @@
 ---
 title: "Worklog Tuần 5"
-date: 2024-01-01
-weight: 1
+date: 2026-05-18
+weight: 5
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
@@ -9,51 +9,40 @@ pre: " <b> 1.5. </b> "
 ⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
 {{% /notice %}}
 
-
 ### Mục tiêu tuần 5:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Nắm vững nguyên lý Tính sẵn sàng cao (High Availability) và Khả năng mở rộng (Scalability).
+* Nghiên cứu cơ chế hoạt động của Elastic Load Balancing.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+| 2   | - Tìm hiểu Elastic Load Balancing (ELB) <br>&emsp; + Application Load Balancer (ALB) <br>&emsp; + Network Load Balancer (NLB) <br> | 18/05/2026   | 18/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 3   | - Nghiên cứu Target Groups & Health Checks <br>&emsp; + Khái niệm thuật toán định tuyến (Routing) <br> | 19/05/2026   | 19/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 4   | - Tìm hiểu Amazon EC2 Auto Scaling (ASG) <br>&emsp; + Launch Templates <br>&emsp; + Scaling Policies <br> | 20/05/2026   | 20/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - **Thực hành:** <br>&emsp; + Tạo EC2 Launch Template (cài sẵn Apache) <br>&emsp; + Tạo Target Group cho HTTP (Port 80) <br> | 21/05/2026   | 21/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 6   | - **Thực hành:** <br>&emsp; + Thiết lập Application Load Balancer <br>&emsp; + Khởi tạo Auto Scaling Group qua 2 AZs <br>&emsp; + Test khả năng tự phục hồi | 22/05/2026   | 22/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
 
 ### Kết quả đạt được tuần 5:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
+* Thấu hiểu sâu sắc cách hệ thống đám mây xử lý lưu lượng truy cập lớn thông qua:
+  * Cân bằng tải lớp 7 (ALB)
+  * Cân bằng tải lớp 4 (NLB)
   * ...
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Hiểu tầm quan trọng của việc giám sát sức khỏe máy chủ tự động:
+  * Thiết lập Target Groups
+  * Cấu hình Health Checks
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
+* Đã tự tay cấu hình môi trường nhân bản máy chủ ảo hóa tự động, bao gồm:
+  * Tạo Launch Templates đóng gói sẵn cấu hình web server
+  * Xây dựng Scaling Policies để co giãn theo nhu cầu
   * ...
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
+* Triển khai hoàn thiện kiến trúc sẵn sàng cao (High Availability):
+  * Chạy Load Balancer phân bổ tải qua nhiều Availability Zones
+  * Giả lập sự cố máy chủ và xác nhận khả năng Auto Scaling tự động thay thế máy hỏng
   * ...
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
+* Chứng minh được tính linh hoạt và khả năng chịu lỗi (fault-tolerance) của ứng dụng web.
 * ...
-
-

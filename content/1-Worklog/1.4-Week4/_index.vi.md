@@ -1,7 +1,7 @@
 ---
 title: "Worklog Tuần 4"
-date: 2024-01-01
-weight: 1
+date: 2026-05-11
+weight: 4
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
@@ -9,51 +9,40 @@ pre: " <b> 1.4. </b> "
 ⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
 {{% /notice %}}
 
-
 ### Mục tiêu tuần 4:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Khám phá các dịch vụ Cơ sở dữ liệu trên AWS.
+* Tìm hiểu sự khác biệt giữa cơ sở dữ liệu quan hệ (RDS) và phi quan hệ (NoSQL).
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+| 2   | - Tìm hiểu Amazon RDS (Relational DB) <br>&emsp; + MySQL, PostgreSQL <br>&emsp; + Multi-AZ Deployments <br>&emsp; + Read Replicas <br> | 11/05/2026   | 11/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 3   | - Tìm hiểu Amazon DynamoDB (NoSQL DB) <br>&emsp; + Partition Keys <br>&emsp; + Sort Keys <br>&emsp; + Provisioned vs On-demand <br> | 12/05/2026   | 12/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 4   | - Phân tích Use-case cho RDS và DynamoDB <br> - Học cách thiết kế DB Subnet Groups <br> | 13/05/2026   | 13/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - **Thực hành:** <br>&emsp; + Cấu hình Private Subnet cho DB <br>&emsp; + Tạo DB Security Group (chỉ nhận traffic từ EC2) <br> | 14/05/2026   | 14/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 6   | - **Thực hành:** <br>&emsp; + Khởi tạo RDS MySQL (Free Tier) <br>&emsp; + SSH vào EC2 và test kết nối Database <br>&emsp; + Dọn dẹp tài nguyên | 15/05/2026   | 15/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
 
 ### Kết quả đạt được tuần 4:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
+* Hiểu rõ ưu và nhược điểm của các loại cơ sở dữ liệu trên AWS:
+  * Amazon RDS (Cơ sở dữ liệu quan hệ)
+  * Amazon DynamoDB (Cơ sở dữ liệu phi quan hệ)
   * ...
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Nắm bắt cơ chế đảm bảo tính sẵn sàng cao (HA) cho Database:
+  * Multi-AZ Failover
+  * Read Replicas (Mở rộng năng lực đọc)
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
+* Đã thiết lập thành công các nhóm mạng bảo mật dành riêng cho cơ sở dữ liệu:
+  * DB Subnet Groups
+  * Security Groups chặn truy cập Internet
   * ...
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
+* Triển khai hoàn chỉnh môi trường cơ sở dữ liệu đám mây, bao gồm:
+  * Khởi tạo máy chủ RDS MySQL
+  * Kết nối an toàn từ tầng Application (EC2) sang tầng Database (RDS) thông qua MySQL CLI
   * ...
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
+* Tự tay thực thi các truy vấn SQL cơ bản trên hệ thống DB đám mây được quản lý.
 * ...
-
-

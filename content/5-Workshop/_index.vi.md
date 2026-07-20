@@ -1,33 +1,38 @@
 ---
-title: "Workshop"
-date: 2024-01-01
-weight: 5
-chapter: false
-pre: " <b> 5. </b> "
+title : "Workshop"
+date : 2024-01-01 
+weight : 5
+chapter : false
+pre : " <b> 5. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+#### Giới thiệu tổng quan
 
+Workshop này giúp bạn xây dựng một quy trình triển khai dự án GameHub serverless từ đầu đến cuối. Nội dung tập trung vào:
+- Khởi tạo pipeline với AWS SAM và AWS CodePipeline.
+- Cấu hình các stage Dev/Prod và thông tin repository.
+- Thêm kiểm thử tự động và giám sát.
+- Triển khai frontend với AWS Amplify.
 
-# Đảm bảo truy cập Hybrid an toàn đến S3 bằng cách sử dụng VPC endpoint
+#### Lợi ích học được
 
-#### Tổng quan
+- Hiểu cách SAM sinh cấu hình pipeline và stage.
+- Biết cách thiết lập môi trường deploy cho Dev và Prod.
+- Kết nối GitHub với AWS và cấu hình pipeline thủ công.
+- Triển khai toàn vẹn backend + frontend cho GameHub.
 
-**AWS PrivateLink** cung cấp kết nối riêng tư đến các dịch vụ aws từ VPCs hoặc trung tâm dữ liệu (on-premise) mà không làm lộ lưu lượng truy cập ra ngoài public internet.
+#### Phương pháp thực hành
 
-Trong bài lab này, chúng ta sẽ học cách tạo, cấu hình, và kiểm tra VPC endpoints để cho phép workload của bạn tiếp cận các dịch vụ AWS mà không cần đi qua Internet công cộng.
+Bạn sẽ học bằng cách làm theo từng bước, từ cài đặt công cụ đến deploy hoàn chỉnh:
+1. Chuẩn bị quyền và công cụ AWS.
+2. Khởi tạo pipeline SAM.
+3. Cấu hình repository, stage và template path.
+4. Thêm bước kiểm thử và giám sát pipeline.
+5. Thiết lập CodePipeline trên AWS Console.
+6. Triển khai frontend bằng Amplify.
 
-Chúng ta sẽ tạo hai loại endpoints để truy cập đến Amazon S3: gateway vpc endpoint và interface vpc endpoint. Hai loại vpc endpoints này mang đến nhiều lợi ích tùy thuộc vào việc bạn truy cập đến S3 từ môi trường cloud hay từ trung tâm dữ liệu (on-premise).
-+ **Gateway** - Tạo gateway endpoint để gửi lưu lượng đến Amazon S3 hoặc DynamoDB using private IP addresses. Bạn điều hướng lưu lượng từ VPC của bạn đến gateway endpoint bằng các bảng định tuyến (route tables)
-+ **Interface** - Tạo interface endpoint để gửi lưu lượng đến các dịch vụ điểm cuối (endpoints) sử dụng Network Load Balancer để phân phối lưu lượng. Lưu lượng dành cho dịch vụ điểm cuối được resolved bằng DNS.
+#### Lưu ý
 
-#### Nội dung
-
-1. [Tổng quan về workshop](5.1-Workshop-overview/)
-2. [Chuẩn bị](5.2-Prerequiste/)
-3. [Truy cập đến S3 từ VPC](5.3-S3-vpc/)
-4. [Truy cập đến S3 từ TTDL On-premises](5.4-S3-onprem/)
-5. [VPC Endpoint Policies (làm thêm)](5.5-Policy/)
-6. [Dọn dẹp tài nguyên](5.6-Cleanup/)
+- Các ví dụ dùng tên dự án `GameHub`; hãy thay thế bằng tên tương ứng nếu cần.
+- Nếu mã nguồn nằm trong monorepo, hãy chỉ rõ thư mục `backend/` và `frontend/` chính xác.
+- Luôn kiểm tra profile AWS và region trước khi chạy lệnh SAM.

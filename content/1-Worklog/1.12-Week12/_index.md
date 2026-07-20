@@ -1,7 +1,7 @@
 ---
 title: "Week 12 Worklog"
-date: 2024-01-01
-weight: 2
+date: 2026-07-06
+weight: 12
 chapter: false
 pre: " <b> 1.12. </b> "
 ---
@@ -12,46 +12,33 @@ pre: " <b> 1.12. </b> "
 
 ### Week 12 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Experience modern serverless computing frameworks using AWS Lambda.
+* Compile internship findings and deploy the final online documentation web report (Lab 7 & Wrap-up).
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | --------------- | ----------------------------------------- |
+| 2   | - Learn serverless computing mechanics <br>&emsp; + AWS Lambda basic features <br>&emsp; + Event-driven Architecture concepts <br>&emsp; + Amazon API Gateway | 06/07/2026 | 06/07/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 3   | - **Practice (Part 1):** <br>&emsp; + Program a basic AWS Lambda function using native Python environments <br>&emsp; + Set up an automated Event Trigger mapped to Amazon S3 uploads | 07/07/2026 | 07/07/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 4   | - **Practice (Part 2):** <br>&emsp; + Upload file items into S3 to trigger execution <br>&emsp; + Access Amazon CloudWatch logs to inspect execution details <br>&emsp; + Complete final cloud resource cleanup procedures | 08/07/2026 | 08/07/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - Review and audit all compiled markdown text files (`.md`) from Week 1 to Week 12 stored inside the content directories | 09/07/2026 | 09/07/2026      | |
+| 6   | - Run the native `hugo` static compilation commands <br> - Package the output folder `public` and execute cloud deployment sequences successfully | 10/07/2026 | 10/07/2026      | |
 
 
 ### Week 12 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
+* Mastered architectural mindsets native to Serverless Computing Paradigms:
+  * Understood the budget efficiency of systems where execution expenses accumulate strictly per millisecond of runtime.
+  * Removed ongoing infrastructure upkeep requirements regarding security patches and operating system management.
   * ...
 
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
+* Created fully automated event-driven cloud logic streams:
+  * Authored data processing programs in Python attached directly to asset adjustments inside Amazon S3 containers.
+  * Isolated runtime faults and inspected operational logs securely using centralized Amazon CloudWatch tracing panels.
   * ...
 
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
+* Completed the holistic pipeline of professional documentation reporting:
+  * Organized technical knowledge metrics collected across the entire 12-week Cloud Journey timeline.
+  * Transformed raw text scripts into a finished documentation portal using the Hugo engine.
+  * Deployed output files to public host channels, creating live URL endpoints to submit for formal internship evaluation.
 * ...

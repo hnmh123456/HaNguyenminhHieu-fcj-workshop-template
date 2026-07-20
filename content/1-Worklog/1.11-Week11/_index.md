@@ -1,7 +1,7 @@
 ---
 title: "Week 11 Worklog"
-date: 2024-01-01
-weight: 2
+date: 2026-06-29
+weight: 11
 chapter: false
 pre: " <b> 1.11. </b> "
 ---
@@ -12,46 +12,35 @@ pre: " <b> 1.11. </b> "
 
 ### Week 11 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Deploy a resilient system architecture capable of automated scaling and load balancing.
+* Implement a connected Application Load Balancer and Auto Scaling Group across multiple zones (Lab 6).
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
+| Day | Task | Start Date | Completion Date | Reference Material |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - **Practice (Part 1):** <br>&emsp; + Create an EC2 Launch Template blueprint <br>&emsp; + Input shell script kịch bản into User Data to pre-install Apache servers | 29/06/2026 | 29/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 3   | - **Practice (Part 2):** <br>&emsp; + Build a Target Group mapping HTTP traffic on Port 80 <br>&emsp; + Launch a public-facing Application Load Balancer (ALB) | 30/06/2026 | 30/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 4   | - **Practice (Part 3):** <br>&emsp; + Initialize an Auto Scaling Group (ASG) linked to the Launch Template <br>&emsp; + Distribute the ASG footprint across 2 distinct Availability Zones | 01/07/2026 | 01/07/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - **Practice (Part 4):** <br>&emsp; + Define capacity boundaries: Desired = 2, Min = 2, Max = 4 instances <br>&emsp; + Register the ASG cluster with the active ALB Health Check trackers | 02/07/2026 | 02/07/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 6   | - **Practice (Part 5):** <br>&emsp; + Simulate a disaster scenario by terminating a running instance manually <br>&emsp; + Monitor the system detecting failure and provisioning a replacement <br>&emsp; + Clean up systems | 03/07/2026 | 03/07/2026      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Week 11 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
+* Successfully constructed and validated a Self-healing cloud infrastructure layout:
+  * Automated application server staging routines cleanly using shell script configurations within User Data blocks.
+  * Channeled incoming connection pathways evenly to background computing targets via a singular ALB DNS endpoint.
   * ...
 
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
+* Realized full system disaster recovery planning at a data center scale:
+  * Protected service availability lines by stretching virtual server footprints across physical Availability Zone boundaries.
+  * Confirmed backup zones automatically absorb standard visitor loads if one data sector becomes isolated.
   * ...
 
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
+* Demonstrated elastic performance capabilities built into active Auto Scaling Groups:
+  * Verified systems correctly identify drops below Desired Capacity levels when instances face sudden destruction.
+  * Monitored the automated launch, verification checks, and configuration integration of fresh servers without human interaction.
   * ...
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
+* Formulated resource collection management procedures to terminate multi-tier scaling stacks cleanly.
 * ...

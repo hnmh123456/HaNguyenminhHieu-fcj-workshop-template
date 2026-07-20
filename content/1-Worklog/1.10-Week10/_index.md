@@ -1,7 +1,7 @@
 ---
 title: "Week 10 Worklog"
-date: 2024-01-01
-weight: 2
+date: 2026-06-22
+weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
@@ -12,46 +12,33 @@ pre: " <b> 1.10. </b> "
 
 ### Week 10 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Internalize architectural concepts regarding self-healing, fault-tolerant, and elastic systems.
+* Study the cooperative relationships between Load Balancers and Auto Scaling groups.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
+| Day | Task | Start Date | Completion Date | Reference Material |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Study Elastic Load Balancing (ELB) models <br>&emsp; + Application Load Balancer (ALB) handling Layer 7 traffic <br>&emsp; + Network Load Balancer (NLB) handling Layer 4 traffic | 22/06/2026 | 22/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 3   | - Deep dive into routing configuration units <br>&emsp; + Setting up Target Groups <br>&emsp; + Implementing continuous Health Check rule behaviors | 23/06/2026 | 23/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 4   | - Explore automated compute capacity provisioning frameworks <br>&emsp; + Role of Amazon EC2 Auto Scaling Groups (ASG) within architectures | 24/06/2026 | 24/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - Study infrastructure standardization blueprints <br>&emsp; + Creating immutable Launch Templates <br> - Analyze metric triggers that drive dynamic Scaling Policies | 25/06/2026 | 25/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 6   | - Review enterprise whitepapers detailing how production applications survive sudden traffic bottlenecks using automated scaling tools | 26/06/2026 | 26/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Week 10 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
+* Mastered core industry design definitions underlying advanced cloud systems:
+  * Scalability (Modifying resource footprints horizontally or vertically).
+  * High Availability (Ensuring services remain continuously active without single failure points).
+  * Elasticity (Automatically shrinking or expanding allocations according to active load parameters).
   * ...
 
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
+* Acquired deep comprehension regarding intelligent public web traffic distribution methods:
+  * Contrasted path-aware Layer 7 ALB systems with high-throughput Layer 4 NLB protocols.
+  * Evaluated server isolation sequences driven by automated recurring Health Check features.
   * ...
 
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
+* Understood batch duplication workflows used to preserve infrastructure uniformity:
+  * Handled Launch Templates to provide consistent runtime environments for newly generated instances.
+  * Analyzed hardware utilization thresholds (CPU/RAM metrics) required to trigger proper capacity expansions.
 * ...

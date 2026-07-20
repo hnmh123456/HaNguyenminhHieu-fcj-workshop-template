@@ -1,20 +1,47 @@
 ---
-title : "Access S3 from on-premises"
-date : 2024-01-01
+title : "Configure Repository and Stage"
+date : 2024-01-01 
 weight : 4
 chapter : false
 pre : " <b> 5.4. </b> "
 ---
 
-#### Overview
+#### Goal
 
-+ In this section, you will create an Interface endpoint to access Amazon S3 from a simulated on-premises environment. The Interface endpoint will allow you to route to Amazon S3 over a VPN connection from your simulated on-premises environment.
+This section helps you configure the repository and stage settings exactly so the SAM pipeline runs correctly.
 
-+ Why using **Interface endpoint**: 
-    + Gateway endpoints only work with resources running in the VPC where they are created. Interface endpoints work with resources running in VPC, and also resources running in on-premises environments. Connectivty from your on-premises environment to the cloud can be provided by AWS Site-to-Site VPN or AWS Direct Connect.
-    + Interface endpoints allow you to connect to services powered by AWS PrivateLink. These services include some AWS services, services hosted by other AWS customers and partners in their own VPCs (referred to as PrivateLink Endpoint Services), and supported AWS Marketplace Partner services. For this workshop, we will focus on connecting to Amazon S3.
+#### Important details
 
-![Interface endpoint architecture](/images/5-Workshop/5.4-S3-onprem/diagram3.png)
+- `Repository subfolder`: the backend folder, e.g. `backend`.
+- `Template path`: the SAM or CloudFormation template path, e.g. `backend/template.yaml`.
+- `SSM Prefix`: e.g. `gamehub/`.
+- `Stack names`: `GameHub-dev`, `GameHub-prod`.
+- `Git branch`: `main`, `V1`, or your deployment branch.
 
+#### Configuration steps
 
+1. When SAM asks for `Repository root path`, enter `backend` if your backend is stored there.
+2. In a monorepo, point the pipeline to the backend folder only.
+3. Ensure the `template path` points to the correct SAM template file.
 
+#### Stage management
+
+- Dev stage is for testing and fast deployments.
+- Prod stage is for stable production deployments.
+- Keep stage and stack names aligned for easier tracking.
+
+#### Verify settings
+
+- Review `pipeline/samconfig.toml` for stage and region values.
+- Review `pipeline/codepipeline.yaml` to confirm the template reference.
+- Adjust `samconfig.toml` if you need to change stage names or regions.
+
+#### Commit recommendation
+
+```bash
+git add .
+git commit -m "ci: add sam pipeline configuration for GameHub"
+git push origin main
+```
+
+Note: Add placeholder images for the pipeline file list and samconfig preview in `images/5-Workshop/5.4-S3-onprem/pipeline-files.svg`.

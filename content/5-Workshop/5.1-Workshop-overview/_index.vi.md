@@ -1,19 +1,40 @@
 ---
-title : "Giới thiệu"
+title : "Giới thiệu Workshop"
 date : 2024-01-01 
 weight : 1
 chapter : false
 pre : " <b> 5.1. </b> "
 ---
 
-#### Giới thiệu về VPC Endpoint
+#### Mục tiêu Workshop
 
-+ Điểm cuối VPC (endpoint) là thiết bị ảo. Chúng là các thành phần VPC có thể mở rộng theo chiều ngang, dự phòng và có tính sẵn sàng cao. Chúng cho phép giao tiếp giữa tài nguyên điện toán của bạn và dịch vụ AWS mà không gây ra rủi ro về tính sẵn sàng.
-+ Tài nguyên điện toán đang chạy trong VPC có thể truy cập Amazon S3 bằng cách sử dụng điểm cuối Gateway. Interface Endpoint  PrivateLink có thể được sử dụng bởi tài nguyên chạy trong VPC hoặc tại TTDL.
+Trong phần này, bạn sẽ biết cách:
+- Khởi tạo pipeline CI/CD cho backend serverless bằng AWS SAM.
+- Cấu hình Dev và Prod stage.
+- Kết nối GitHub với CodePipeline.
+- Triển khai frontend với AWS Amplify.
+- Thêm kiểm thử và giám sát trong pipeline.
 
-#### Tổng quan về workshop
-Trong workshop này, bạn sẽ sử dụng hai VPC.
-+ **"VPC Cloud"** dành cho các tài nguyên cloud như Gateway endpoint và EC2 instance để kiểm tra.
-+ **"VPC On-Prem"** mô phỏng môi trường truyền thống như nhà máy hoặc trung tâm dữ liệu của công ty. Một EC2 Instance chạy phần mềm StrongSwan VPN đã được triển khai trong "VPC On-prem" và được cấu hình tự động để thiết lập đường hầm VPN Site-to-Site với AWS Transit Gateway. VPN này mô phỏng kết nối từ một vị trí tại TTDL (on-prem) với AWS cloud. Để giảm thiểu chi phí, chỉ một phiên bản VPN được cung cấp để hỗ trợ workshop này. Khi lập kế hoạch kết nối VPN cho production workloads của bạn, AWS khuyên bạn nên sử dụng nhiều thiết bị VPN để có tính sẵn sàng cao.
+#### Nội dung chính
 
-![overview](/images/5-Workshop/5.1-Workshop-overview/diagram1.png)
+1. Khởi tạo pipeline bằng `sam pipeline init --bootstrap`.
+2. Cấu hình repository, template path và stage.
+3. Thêm stage kiểm thử tự động.
+4. Thiết lập giám sát CloudWatch cho Lambda và API Gateway.
+5. Triển khai frontend Flutter web với Amplify.
+
+#### Kiến trúc GameHub
+
+GameHub được xây dựng như một ứng dụng serverless:
+- Lambda function xử lý logic,
+- API Gateway cung cấp endpoint HTTP,
+- AWS Cognito hoặc custom auth quản lý đăng nhập,
+- AWS Amplify hosting phục vụ frontend tĩnh.
+
+#### Lưu ý
+
+- Tên `GameHub` là ví dụ; hãy thay bằng tên dự án của bạn.
+- Nếu backend và frontend cùng trong một repository, xác định rõ thư mục riêng.
+- Kiểm tra profile và region AWS trước khi chạy lệnh SAM.
+
+Note (hình ảnh): Chèn ảnh mô hình kiến trúc hệ thống tại vị trí này để trực quan. Thư mục placeholder: `images/5-Workshop/5.1-Workshop-overview/gamehub-architecture.svg`.

@@ -1,57 +1,50 @@
 ---
 title: "Week 4 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-05-11
+weight: 4
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
-{{% notice warning %}} 
+{{% notice warning %}}
 ⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
 {{% /notice %}}
 
 
 ### Week 4 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Explore Database services on AWS.
+* Differentiate between relational databases (RDS) and non-relational databases (NoSQL).
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
+| 2   | - Learn Amazon RDS (Relational DB) <br>&emsp; + MySQL, PostgreSQL <br>&emsp; + Multi-AZ Deployments <br>&emsp; + Read Replicas <br> | 11/05/2026   | 11/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 3   | - Learn Amazon DynamoDB (NoSQL DB) <br>&emsp; + Partition Keys <br>&emsp; + Sort Keys <br>&emsp; + Provisioned vs On-demand <br> | 12/05/2026   | 12/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 4   | - Analyze Use-cases for RDS and DynamoDB <br> - Learn to design DB Subnet Groups <br> | 13/05/2026   | 13/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - **Practice:** <br>&emsp; + Configure Private Subnet for DB <br>&emsp; + Create DB Security Group (only allow traffic from EC2) <br> | 14/05/2026   | 14/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 6   | - **Practice:** <br>&emsp; + Launch RDS MySQL (Free Tier) <br>&emsp; + SSH into EC2 and test Database connection <br>&emsp; + Clean up resources | 15/05/2026   | 15/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Week 4 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
+* Understood the pros and cons of different database engines on AWS:
+  * Amazon RDS (Relational Database)
+  * Amazon DynamoDB (Non-relational Database)
   * ...
 
-* Successfully created and configured an AWS Free Tier account.
+* Grasped High Availability (HA) mechanisms for Databases:
+  * Multi-AZ Failover
+  * Read Replicas (Scaling read capacity)
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
+* Successfully established secure network groups strictly for databases:
+  * DB Subnet Groups
+  * Security Groups blocking internet access
   * ...
 
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
+* Successfully deployed a complete cloud database environment, including:
+  * Initializing RDS MySQL server
+  * Connecting securely from the Application tier (EC2) to the Database tier (RDS) via MySQL CLI
   * ...
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
+* Executed basic SQL queries manually on the managed cloud DB system.
 * ...

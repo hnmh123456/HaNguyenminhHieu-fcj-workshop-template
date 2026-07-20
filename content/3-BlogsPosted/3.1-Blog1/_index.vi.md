@@ -1,31 +1,50 @@
 ---
-title: "Blog 1"
-date: 2024-01-01
-weight: 1
-chapter: false
-pre: " <b> 3.1. </b> "
+title : "Blog 1: Cách Synthesia tối ưu hóa AI sinh video trên Amazon EC2 G7e"
+date : 2026-06-09
+weight : 1
+chapter : false
+pre : " <b> 5.1. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
-# SESSION POLICIES TRONG AMAZON EKS POD IDENTITY
+### [Case Study] Cách Synthesia tối ưu hóa AI sinh video trên Amazon EC2 G7e — tiết kiệm $900 mỗi 1.000 giờ
 
-Amazon EKS Pod Identity vừa bổ sung tính năng session policies, cho phép bạn thu hẹp quyền IAM một cách linh hoạt và chính xác cho từng pod mà không cần tạo thêm nhiều IAM roles riêng biệt. Đây là bước tiến quan trọng giúp áp dụng nguyên tắc least privilege hiệu quả hơn trong môi trường Kubernetes quy mô lớn.
+Khi AI tạo video, GPU phải dừng lại sau mỗi đoạn nhỏ để chờ máy tính ghi dữ liệu ra file — rồi mới được chạy tiếp. Nghe nhỏ, nhưng tích lại thì 18% thời gian GPU đang đứng không.
 
-Các điểm chính cần nắm:
+Synthesia vừa công bố cách họ xử lý đúng vấn đề này. GPU tăng lên 99.9% hoạt động, nhanh hơn 8.2%, tiết kiệm gần $900 cho mỗi 1.000 giờ video — mà không đụng gì vào mô hình AI.
 
-* Session policy là một IAM policy inline được chỉ định khi tạo hoặc cập nhật Pod Identity association.
-* Quyền hiệu quả = intersection (giao) giữa permissions của IAM role và session policy → session policy chỉ có thể thu hẹp, không thể mở rộng quyền.
-* Giúp tránh tình trạng over-permissioning khi reuse chung một IAM role cho nhiều workloads có nhu cầu khác nhau.
-* Hỗ trợ cả same-account và cross-account (qua IAM role chaining).
-* Giảm đáng kể số lượng IAM roles cần quản lý, tránh chạm giới hạn quota IAM trong cluster lớn.
-* Cấu hình dễ dàng qua AWS Management Console, AWS CLI hoặc AWS SDK khi tạo association giữa Kubernetes ServiceAccount và IAM role.
+#### Vấn đề là gì?
+Khi AI tạo video, nó không xử lý cả video một lúc — quá nặng. Thay vào đó, nó chia nhỏ thành từng "khúc" (chunk), mỗi lần vài khung hình.
 
-Tính năng này đặc biệt hữu ích khi bạn có nhiều ứng dụng chạy trên cùng một IAM role nhưng cần giới hạn quyền khác nhau (ví dụ: một pod chỉ đọc S3 bucket cụ thể, pod khác chỉ gọi một số API nhất định).
+Theo cách làm cũ (tuần tự):
+- GPU xử lý xong chunk 1 &rarr; dừng lại
+- Chờ máy tính chuyển dữ liệu ra file xong
+- Rồi mới chạy tiếp chunk 2
 
-...Hình ảnh...
+Kết quả thực đo: GPU chỉ làm việc 82% thời gian, còn 18% là đứng không. Với máy chủ hàng nghìn đô/giờ — đây là lãng phí rất lớn.
 
-...Link...
+#### Synthesia + AWS đã làm gì?
+Họ đặt tên giải pháp là **Asynchronous Frame Generation Pipeline** — nghe phức tạp nhưng ý tưởng đơn giản: Để GPU làm việc không ngừng. Còn việc ghi file, chuyển dữ liệu — giao cho CPU làm song song, đừng để GPU phải chờ.
 
-...Hướng dẫn...
+Cụ thể họ dùng 3 phương pháp:
+1. **Hai làn xử lý riêng:** GPU tính toán một làn, chuyển dữ liệu một làn — hai việc chạy cùng lúc.
+2. **Một "nhân viên" riêng chuyên ghi file:** giải phóng CPU chính để nó chỉ tập trung ra lệnh cho GPU.
+3. **Hệ thống 2 bộ nhớ đệm luân phiên:** giống 2 cái khay ở quán ăn — bếp đang đổ thức ăn vào khay A, trong khi nhân viên đang mang khay B ra bàn, không ai chặn ai.
+
+#### Kết luận:
+&rarr; Nhanh hơn 8.2%, GPU gần như không bao giờ nghỉ — và không cần thay đổi gì trong mô hình AI, zero.
+
+#### Tại sao điều này quan trọng?
+Bạn không cần làm kỹ thuật mới thấy ý nghĩa của nó. Khi các công ty AI vận hành hiệu quả hơn &rarr; chi phí giảm &rarr; giá dịch vụ AI với người dùng cuối cũng có cơ hội rẻ hơn theo thời gian.
+
+Một điểm mình thấy đáng chú ý trong nghiên cứu này là: toàn bộ code mẫu được đăng công khai trên GitHub. Bất kỳ ai đang xây dựng pipeline tạo video AI — dù dùng mô hình gì, GPU nào — đều có thể áp dụng kỹ thuật tương tự.
+
+#### Hình ảnh minh họa từ hệ thống
+
+<img width="864" height="465" alt="721310532_1714956436369794_1702266059659888743_n" src="https://github.com/user-attachments/assets/e676923b-6ac5-4dff-b902-e82cb6299428" />
+
+*Chú thích: Đây là GPU đang bị 'đứng chờ' — những khoảng trắng trên timeline chính là lúc GPU idle, không làm gì cả.*
+<img width="865" height="460" alt="719574039_1714958043036300_1311420270379012789_n" src="https://github.com/user-attachments/assets/bef34d8b-1a6d-4ad5-a5d5-3004f2230f2d" />
+
+*Chú thích: Sau khi tối ưu — GPU chạy liên tục, không còn khoảng trắng 'đứng chờ' nữa. Đây là sự khác biệt giữa 82% và 99.9%.*
+
+> Bài gốc (tiếng Anh, khá kỹ thuật): https://aws.amazon.com/blogs/architecture/how-synthesia-optimizes-generative-ai-video-inference-on-amazon-ec2-g7e-instances/

@@ -1,7 +1,7 @@
 ---
 title: "Worklog Tuần 10"
-date: 2024-01-01
-weight: 2
+date: 2026-06-22
+weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
@@ -12,48 +12,32 @@ pre: " <b> 1.10. </b> "
 
 ### Mục tiêu tuần 10:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Tiếp thu sâu sắc các lý thuyết và giải pháp hạ tầng có khả năng tự phục hồi, chống chịu lỗi và tự động co giãn tài nguyên đám mây.
+* Hiểu rõ cơ chế phối hợp hoạt động của hệ thống Cân bằng tải và Nhóm co giãn tự động.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+| 2   | - Tìm hiểu dịch vụ cân bằng tải Elastic Load Balancing (ELB) <br>&emsp; + Cơ chế Application Load Balancer (ALB) xử lý tầng 7 <br>&emsp; + Cơ chế Network Load Balancer (NLB) xử lý tầng 4 | 22/06/2026   | 22/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 3   | - Nghiên cứu sâu thành phần cấu tạo điều hướng định tuyến luồng mạng <br>&emsp; + Cấu hình Target Groups (Nhóm mục tiêu) <br>&emsp; + Quy tắc Health Checks (Kiểm tra trạng thái sức khỏe) | 23/06/2026   | 23/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 4   | - Tìm hiểu hệ thống co giãn quy mô máy chủ tự động Amazon EC2 Auto Scaling <br>&emsp; + Vai trò kiến trúc Auto Scaling Groups (ASG) <br> | 24/06/2026   | 24/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - Nghiên cứu tệp cấu hình khuôn mẫu hạ tầng bất biến <br>&emsp; + Thiết kế Launch Templates <br> - Phân tích các chính sách kích hoạt co giãn hệ thống (Scaling Policies) | 25/06/2026   | 25/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 6   | - Đọc tài liệu phân tích Use-case thực tế từ các doanh nghiệp lớn xử lý hiện tượng nghẽn mạng đột biến nhờ công cụ tự động co giãn | 26/06/2026   | 26/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
 
 ### Kết quả đạt được tuần 10:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
+* Nắm vững các thuật ngữ cốt lõi và tiêu chuẩn thiết kế kiến trúc đám mây nâng cao:
+  * Scalability (Tính mở rộng linh hoạt theo chiều ngang và chiều dọc)
+  * High Availability (Tính sẵn sàng cao giúp ứng dụng hoạt động không ngừng nghỉ)
+  * Elasticity (Tính đàn hồi tự động thu gom hoặc nhả tài nguyên theo tải thực tế)
   * ...
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
+* Hiểu sâu sắc kỹ thuật phân phối luồng dữ liệu thông minh trên Internet:
+  * Phân biệt rõ ALB xử lý định tuyến thông minh dựa trên URL/Path ở tầng ứng dụng và NLB tối ưu hiệu năng tốc độ siêu cao ở tầng mạng giao thức TCP
+  * Cơ chế giám sát liên tục để cô lập các máy chủ lỗi thông qua định kỳ Health Checks
   * ...
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
+* Thấu hiểu giải pháp nhân bản và quản lý cấu hình hệ thống đồng loạt tự động:
+  * Sử dụng Launch Templates làm nền móng chuẩn hóa môi trường cho mọi máy ảo phát sinh mới
+  * Nắm rõ cách thiết lập ngưỡng cảnh báo CPU/RAM để kích hoạt co giãn tự động hợp lý
 * ...
-
-

@@ -1,7 +1,7 @@
 ---
 title: "Worklog Tuần 9"
-date: 2024-01-01
-weight: 1
+date: 2026-06-15
+weight: 9
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
@@ -12,48 +12,34 @@ pre: " <b> 1.9. </b> "
 
 ### Mục tiêu tuần 9:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Khởi tạo máy chủ cơ sở dữ liệu đám mây hoạt động độc lập và bảo mật an toàn sâu trong mạng nội bộ.
+* Thực hành thiết lập kết nối an toàn đa tầng kiến trúc từ máy chủ ứng dụng đến cơ sở dữ liệu (Lab 5).
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+| 2   | - Nghiên cứu cấu hình phân vùng mạng an toàn cho DB <br>&emsp; + Tạo nhóm DB Subnet Groups giới hạn trong Private Subnets <br> | 15/06/2026   | 15/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 3   | - Cấu hình hệ thống tường lửa lớp Database <br>&emsp; + Thiết lập DB Security Group <br>&emsp; + Cấu hình luật Inbound chỉ cho phép duy nhất dải IP hoặc Security Group của tầng Web/App đi vào | 16/06/2026   | 16/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 4   | - **Thực hành (Phần 1):** <br>&emsp; + Khởi tạo một phiên làm việc Amazon RDS MySQL Engine thuộc gói Free Tier <br>&emsp; + Gắn kết cấu hình DB Subnet Groups và Security Group đã chuẩn bị | 17/06/2026   | 17/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - **Thực hành (Phần 2):** <br>&emsp; + Điều khiển truy cập từ xa kết nối SSH vào máy chủ ứng dụng EC2 Bastion Host <br>&emsp; + Cài đặt công cụ dòng lệnh MySQL CLI cục bộ trên EC2 | 18/06/2026   | 18/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 6   | - **Thực hành (Phần 3):** <br>&emsp; + Sử dụng Endpoint nội bộ thực hiện lệnh kết nối từ EC2 sang RDS MySQL <br>&emsp; + Thực thi các thao tác SQL cơ bản (CREATE TABLE, INSERT, SELECT) <br>&emsp; + Dọn dẹp tài nguyên tránh cước phí phát sinh | 19/06/2026   | 19/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
 
 ### Kết quả đạt được tuần 9:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
+* Đã cấu hình và vận hành thành công kiến trúc bảo mật phân tầng (Multi-tier Infrastructure):
+  * Tầng Database được giấu hoàn toàn trong phân vùng mạng kín Private Subnet
+  * Chặn đứng mọi nỗ lực quét cổng hoặc dò tìm thông tin từ môi trường mạng ngoài Internet
   * ...
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
+* Làm chủ kỹ năng cấu hình tường lửa lớp dữ liệu tinh gọn nâng cao:
+  * Tạo lập thành công liên kết an toàn giữa DB Subnet Groups đa vùng
+  * Áp dụng thành công luật lọc gói tin chỉ cho phép cổng dịch vụ tiêu chuẩn (Port 3306) kết nối từ tầng máy chủ Web chỉ định
   * ...
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
+* Thành thục kỹ năng quản trị dòng lệnh điều khiển hệ thống từ xa:
+  * Sử dụng thành công công cụ terminal máy chủ Linux kết nối xuyên suốt đến dịch vụ quản lý đám mây
+  * Khởi tạo bảng dữ liệu và ghi đọc kiểm tra chất lượng kết nối thành công qua MySQL CLI
   * ...
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
+* Hiểu rõ tầm quan trọng của việc thu hồi tài nguyên thực hành (RDS snapshot/termination) để tối ưu hóa hạn mức tài khoản.
 * ...
-
-

@@ -1,7 +1,7 @@
 ---
 title: "Week 8 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-06-08
+weight: 8
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
@@ -12,46 +12,31 @@ pre: " <b> 1.8. </b> "
 
 ### Week 8 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Conduct a comprehensive study on AWS cloud database service offerings.
+* Analyze data schemas and design network partition strategies for storage layers.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
+| Day | Task | Start Date | Completion Date | Reference Material |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Study Amazon RDS architecture (Relational Databases) <br>&emsp; + Supported Database Engines (MySQL, PostgreSQL) <br>&emsp; + Automated platform management features | 08/06/2026 | 08/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 3   | - Research High Availability (HA) models for data storage <br>&emsp; + Multi-AZ Deployments (Synchronous data replication) <br>&emsp; + Read Replicas (Horizontal scaling for read workloads) | 09/06/2026 | 09/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 4   | - Learn non-relational NoSQL database options <br>&emsp; + Amazon DynamoDB core elements <br>&emsp; + Key concepts of Partition Keys and Sort Keys <br>&emsp; + Provisioned vs On-demand capacity modes | 10/06/2026 | 10/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - Analyze business use-cases to evaluate when to choose RDS vs DynamoDB <br> - Sketch a sample logical relational database schema template | 11/06/2026 | 11/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 6   | - Study network isolation principles to safely secure cloud databases <br> - Understand the basic functionalities of DB Subnet Groups | 12/06/2026 | 12/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Week 8 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
+* Differentiated structural variations between relational and non-relational cloud data storage engines:
+  * Amazon RDS addresses intricate transactional queries needing ACID compliance parameters.
+  * Amazon DynamoDB satisfies high-scale applications requiring predictable sub-millisecond latencies.
   * ...
 
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
+* Mastered architectural designs optimized to maintain continuous data operations:
+  * Multi-AZ failover frameworks protecting systems against hardware infrastructure outages.
+  * Read Replica separation models increasing performance for read-heavy system structures.
   * ...
 
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
+* Grasped backend administrative features surrounding managed automated backup procedures (Automated Snapshots).
+* Created a clean logical data schema defining entity relationships clearly before physical deployment workflows.
 * ...

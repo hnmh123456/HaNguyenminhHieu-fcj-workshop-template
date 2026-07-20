@@ -1,58 +1,43 @@
 ---
 title: "Worklog Tuần 12"
-date: 2024-01-01
-weight: 2
+date: 2026-07-06
+weight: 12
 chapter: false
-pre: " <b> 1.12 </b> "
+pre: " <b> 1.12. </b> "
 ---
 {{% notice warning %}}
 ⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
 {{% /notice %}}
 
+
 ### Mục tiêu tuần 12:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Tiếp cận mô hình kiến trúc hiện đại Điện toán không máy chủ Serverless (AWS Lambda).
+* Tổng kết toàn bộ lộ trình kiến thức thực tập và đóng gói hoàn thiện sản phẩm trang web báo cáo kết quả trực tuyến (Lab 7 & Wrap-up).
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+| 2   | - Tìm hiểu mô hình điện toán không máy chủ Serverless <br>&emsp; + AWS Lambda cơ bản <br>&emsp; + Khái niệm kiến trúc hướng sự kiện (Event-driven Architecture) <br>&emsp; + Amazon API Gateway | 06/07/2026   | 06/07/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 3   | - **Thực hành (Phần 1):** <br>&emsp; + Lập trình viết một hàm AWS Lambda cơ bản bằng ngôn ngữ Python <br>&emsp; + Cấu hình Event Trigger tự động kích hoạt hàm khi có file mới đẩy vào Amazon S3 | 07/07/2026   | 07/07/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 4   | - **Thực hành (Phần 2):** <br>&emsp; + Thực hiện upload file ảnh lên S3 <br>&emsp; + Truy cập Amazon CloudWatch theo dõi nhật ký thực thi logs hành vi <br>&emsp; + Thực hiện dọn dẹp các tài nguyên | 08/07/2026   | 08/07/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - Kiểm tra, rà soát toàn bộ tệp tin nội dung văn bản `.md` từ tuần 1 đến tuần 12 trong thư mục content của mã nguồn báo cáo | 09/07/2026   | 09/07/2026      | |
+| 6   | - Thực thi câu lệnh biên dịch hệ thống `hugo` tĩnh <br> - Đóng gói thư mục sản phẩm `public` và tiến hành triển khai đẩy lên môi trường trực tuyến thành công | 10/07/2026   | 10/07/2026      | |
 
 ### Kết quả đạt được tuần 12:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
+* Làm chủ tư duy xây dựng giải pháp công nghệ không máy chủ (Serverless Paradigm):
+  * Hiểu cơ chế vận hành tối ưu chi phí tuyệt đối khi code chỉ chạy và tính tiền theo từng mili-giây khi có sự kiện kích hoạt kích duyệt
+  * Loại bỏ hoàn toàn gánh nặng kỹ thuật về việc quản lý và cập nhật bản vá hệ điều hành cho máy chủ máy ảo nền
   * ...
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
+* Triển khai xây dựng thành công ứng dụng tự động hóa hướng sự kiện:
+  * Tạo lập hoàn chỉnh hàm xử lý tự động AWS Lambda bằng mã lệnh Python kết nối trực tiếp với cổng tài nguyên lưu trữ Amazon S3
+  * Thành thục kỹ năng phân tích và giám sát gỡ lỗi hệ thống thông qua công cụ thu thập log tập trung Amazon CloudWatch
   * ...
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
+* Hoàn thành trọn vẹn tiến trình xây dựng báo cáo chuyên nghiệp:
+  * Hệ thống hóa toàn bộ chuỗi số liệu hoạt động, kiến thức kỹ thuật tích lũy xuyên suốt 12 tuần đồng hành cùng chương trình Cloud Journey
+  * Biên dịch thành công mã nguồn thô sang trang web tài liệu tĩnh hoàn chỉnh bằng Hugo framework
+  * Triển khai phân phối sản phẩm báo cáo lên môi trường mạng trực tuyến, tạo lập thành công đường link xem báo cáo trực quan gửi đến người hướng dẫn đánh giá nghiệm thu đợt thực tập
 * ...
-
-

@@ -1,37 +1,81 @@
 ---
-title : "Dọn dẹp tài nguyên"
+title : "Triển khai Frontend với AWS Amplify"
 date : 2024-01-01
-weight : 6
+weight : 8
 chapter : false
 pre : " <b> 5.6. </b> "
 ---
 
-#### Dọn dẹp tài nguyên
+#### Mục tiêu
 
-Xin chúc mừng bạn đã hoàn thành xong lab này!
-Trong lab này, bạn đã học về các mô hình kiến trúc để truy cập Amazon S3 mà không sử dụng Public Internet.
+Triển khai frontend tĩnh của GameHub bằng AWS Amplify và cấu hình build phù hợp.
 
-+ Bằng cách tạo Gateway endpoint, bạn đã cho phép giao tiếp trực tiếp giữa các tài nguyên EC2 và Amazon S3, mà không đi qua Internet Gateway.
-Bằng cách tạo Interface endpoint, bạn đã mở rộng kết nối S3 đến các tài nguyên chạy trên trung tâm dữ liệu trên chỗ của bạn thông qua AWS Site-to-Site VPN hoặc Direct Connect.
+#### Bước 1: Khởi tạo app Amplify
 
-#### Dọn dẹp
-1. Điều hướng đến Hosted Zones trên phía trái của bảng điều khiển Route 53. Nhấp vào tên của  s3.us-east-1.amazonaws.com zone. Nhấp vào Delete và xác nhận việc xóa bằng cách nhập từ khóa "delete".
+1. Vào Amplify Console.
+2. Nhấn `Deploy an app`.
+3. Chọn `GitHub` làm source provider.
+4. Xác thực GitHub và chọn repository.
 
-![hosted zone](/images/5-Workshop/5.6-Cleanup/delete-zone.png)
+#### Bước 2: Chọn branch và thư mục
 
-2. Disassociate Route 53 Resolver Rule - myS3Rule from "VPC Onprem" and Delete it. 
+1. Chọn nhánh deploy, ví dụ `V1`.
+2. Nếu repo là monorepo, bật `My app is a monorepo`.
+3. Nhập `frontend` vào `Monorepo root directory`.
 
-![hosted zone](/images/5-Workshop/5.6-Cleanup/vpc.png)
+#### Bước 3: Cấu hình build
 
-4.Mở console của CloudFormation và xóa hai stack CloudFormation mà bạn đã tạo cho bài thực hành này:
-+ PLOnpremSetup
-+ PLCloudSetup
+Sử dụng cấu hình sau để build Flutter web trên Amplify:
+```yaml
+version: 1
+applications:
+  - frontend:
+      phases:
+        build:
+          commands:
+            - ORIGINAL_DIR=$(pwd)
+            - which xz || sudo yum install -y xz
+            - cd /tmp
+            - wget https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.22.0-stable.tar.xz
+            - tar xf flutter_linux_3.22.0-stable.tar.xz
+            - export PATH="$PATH:/tmp/flutter/bin"
+            - cd $ORIGINAL_DIR
+            - flutter doctor
+            - flutter config --enable-web
+            - flutter channel stable
+            - flutter upgrade
+            - flutter pub get
+            - flutter build web --release --dart-define=COGNITO_REGION=$COGNITO_REGION --dart-define=COGNITO_USER_POOL_ID=$COGNITO_USER_POOL_ID --dart-define=COGNITO_CLIENT_ID=$COGNITO_CLIENT_ID --dart-define=API_GATEWAY_WS_URL=$API_GATEWAY_WS_URL --dart-define=API_GATEWAY_HTTP_URL=$API_GATEWAY_HTTP_URL
+      artifacts:
+        baseDirectory: build/web
+        files:
+          - "**/*"
+      cache:
+        paths: []
+    appRoot: frontend
+```
 
-![delete stack](/images/5-Workshop/5.6-Cleanup/delete-stack.png)
+#### Bước 4: Biến môi trường
 
-5. Xóa các S3 bucket
+Thêm biến sau trong Amplify Console:
+- `COGNITO_REGION`
+- `COGNITO_USER_POOL_ID`
+- `COGNITO_CLIENT_ID`
+- `API_GATEWAY_HTTP_URL`
+- `API_GATEWAY_WS_URL`
+- `LOCAL_API_URL`
+- `USE_LOCAL_BACKEND`
+- `APK_DOWNLOAD_URL`
 
-+ Mở bảng điều khiển S3
-+ Chọn bucket chúng ta đã tạo cho lab, nhấp chuột và xác nhận là empty. Nhấp Delete và xác nhận delete.
-+ 
-![delete s3](/images/5-Workshop/5.6-Cleanup/delete-s3.png)
+#### Bước 5: Review và deploy
+
+1. Kiểm tra cấu hình ứng dụng.
+2. Nhấn `Save and deploy`.
+3. Amplify sẽ tự động build và deploy frontend.
+
+#### Kết quả
+
+- Frontend được host dưới URL Amplify.
+- Mỗi lần push lên branch deploy sẽ kích hoạt build tự động.
+
+Note (hình ảnh): Thêm ảnh `amplify-setup.png` vào `images/5-Workshop/5.6-Cleanup/amplify-setup.svg`.
