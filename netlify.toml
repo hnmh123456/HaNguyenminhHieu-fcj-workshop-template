@@ -7,4 +7,4 @@
   HUGO_ENABLEGITINFO = "true"
 
 [context.production.environment]
-  HUGO_BASEURL = "https://workshop-sample.awsfcaj.com/"
+  HUGO_BASEURL = "https://khanhtruong.netlify.app/"
