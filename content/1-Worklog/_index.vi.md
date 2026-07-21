@@ -6,9 +6,9 @@ chapter: false
 pre: " <b> 1. </b> "
 ---
 
-**Trên trang này**, bạn sẽ cần giới thiệu worklog của mình. **Bạn** đã hoàn thành nó như thế nào? Bạn đã mất bao nhiêu tuần để hoàn thành chương trình? **Bạn** đã làm gì trong những tuần đó?
+**Trên trang này**, bạn sẽ cần giới thiệu nhật ký làm việc của mình. **Bạn** đã hoàn thành nó như thế nào? Bạn đã mất bao nhiêu tuần để hoàn thành chương trình? **Bạn** đã làm gì trong những tuần đó?
 
-Thông thường, và theo tiêu chuẩn, một worklog được thực hiện trong khoảng 3 tháng (trong suốt thời gian thực tập) với nội dung hàng tuần như sau:
+Thông thường, và theo tiêu chuẩn, một nhật ký làm việc được thực hiện trong khoảng 3 tháng (trong suốt thời gian thực tập) với nội dung hàng tuần như sau:
 
 **Tuần 1:** [Làm quen tài khoản AWS, AWS CLI và Amazon EC2 & EBS](1.1-week1/)
 

@@ -37,6 +37,9 @@ Bạn sẽ học bằng cách làm theo từng bước, từ cài đặt công c
 - Nếu mã nguồn nằm trong monorepo, hãy chỉ rõ thư mục `backend/` và `frontend/` chính xác.
 - Luôn kiểm tra profile AWS và region trước khi chạy lệnh SAM.
 
+####Liên kết dự án
+[Truy cập website dự án] (https://v1.d2n6xvyflakovc.amplifyapp.com/)
+
 #### Một số hình ảnh về project 
 ![Image 1](/images/5-Workshop/anh1.png)
 
