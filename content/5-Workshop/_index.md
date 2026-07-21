@@ -29,4 +29,23 @@ You will work with a sample GameHub app composed of:
 1. backend serverless services managed by SAM,
 2. a static frontend hosted by AWS Amplify.
 
+#### Some picture of project
+![Image 1](/images/5-Workshop/anh1.png)
+
+![Image 2](/images/5-Workshop/anh2.png)
+
+![Image 3](/images/5-Workshop/anh3.png)
+
+![Image 4](/images/5-Workshop/anh4.png)
+
+![Image 5](/images/5-Workshop/anh5.png)
+
+![Image 6](/images/5-Workshop/anh6.png)
+
+![Image 7](/images/5-Workshop/anh7.png)
+
+![Image 8](/images/5-Workshop/anh8.png)
+
+![Image 9](/images/5-Workshop/anh9.png)
+
 

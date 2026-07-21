@@ -3,112 +3,108 @@ title: "Proposal"
 date: 2026-07-12
 weight: 2
 chapter: false
-pre: " <b> 2. </b> "
+pre: "<b> 2. </b>"
 ---
 
-
-In this section, you need to summarize the contents of the workshop that you **plan** to conduct.
-
-# IoT Weather Platform for Lab Research
-## A Unified AWS Serverless Solution for Real-Time Weather Monitoring
+# Real-time Serverless Game Platform
+## Unified AWS Serverless Solution for Real-time Multiplayer Games
 
 ### 1. Executive Summary
-The IoT Weather Platform is designed for the ITea Lab team in Ho Chi Minh City to enhance weather data collection and analysis. It supports up to 5 weather stations, with potential scalability to 10-15, utilizing Raspberry Pi edge devices with ESP32 sensors to transmit data via MQTT. The platform leverages AWS Serverless services to deliver real-time monitoring, predictive analytics, and cost efficiency, with access restricted to 5 lab members via Amazon Cognito.
+The **DoAnMiniGame** project is designed to build an optimal Real-time Multiplayer Game platform system. The system smoothly handles concurrent connection streams from a client application written in Flutter. The platform fully leverages the power of the **AWS Serverless** model and the **automated CI/CD pipeline (GitHub Actions + AWS SAM)** to completely eliminate the cost of managing physical server infrastructure, provide real-time monitoring capabilities, optimize security, and save operational costs based on actual resource consumption.
+
+---
 
 ### 2. Problem Statement
-### What’s the Problem?
-Current weather stations require manual data collection, becoming unmanageable with multiple units. There is no centralized system for real-time data or analytics, and third-party platforms are costly and overly complex.
 
-### The Solution
-The platform uses AWS IoT Core to ingest MQTT data, AWS Lambda and API Gateway for processing, Amazon S3 for storage (including a data lake), and AWS Glue Crawlers and ETL jobs to extract, transform, and load data from the S3 data lake to another S3 bucket for analysis. AWS Amplify with Next.js provides the web interface, and Amazon Cognito ensures secure access. Similar to Thingsboard and CoreIoT, users can register new devices and manage connections, though this platform operates on a smaller scale and is designed for private use. Key features include real-time dashboards, trend analysis, and low operational costs.
+#### Current Problem
+Traditional multiplayer game architectures require maintaining dedicated server clusters running 24/7, leading to very high fixed costs even when there are no players. Furthermore, manual Auto-scaling configurations often fail to respond in time when player traffic spikes, easily causing network congestion or system crashes. Real-time Game State synchronization between game rooms is also very complex and requires ultra-low latency infrastructure.
 
-### Benefits and Return on Investment
-The solution establishes a foundational resource for lab members to develop a larger IoT platform, serving as a study resource, and provides a data foundation for AI enthusiasts for model training or analysis. It reduces manual reporting for each station via a centralized platform, simplifying management and maintenance, and improves data reliability. Monthly costs are $0.66 USD per the AWS Pricing Calculator, with a 12-month total of $7.92 USD. All IoT equipment costs are covered by the existing weather station setup, eliminating additional development expenses. The break-even period of 6-12 months is achieved through significant time savings from reduced manual work.
+#### Solution
+The platform uses **Amazon API Gateway (WebSocket API)** to maintain continuous two-way connections, **AWS Lambda** to handle independent game logic (Event-driven), and **Amazon DynamoDB** as a NoSQL database to store connection sessions (`Connections`) and game room states (`Games`). The Distribution & Edge Layer is completely streamlined by using **AWS Amplify (Web Hosting & CDN)** for stable Flutter Web distribution, combined with **AWS WAF** to block DDoS attacks and **Route 53** for domain name resolution. The deployment process is fully automated through **GitHub Actions** coordinated with the **AWS SAM CLI** to package and deploy the infrastructure as code (IaC).
 
-### 3. Solution Architecture
-The platform employs a serverless AWS architecture to manage data from 5 Raspberry Pi-based stations, scalable to 15. Data is ingested via AWS IoT Core, stored in an S3 data lake, and processed by AWS Glue Crawlers and ETL jobs to transform and load it into another S3 bucket for analysis. Lambda and API Gateway handle additional processing, while Amplify with Next.js hosts the dashboard, secured by Cognito. The architecture is detailed below:
+#### Benefits and Return on Investment (ROI)
+The solution creates a solid foundation for a real-time multiplayer game system that runs stably with minimal latency (just a few milliseconds) and auto-scaling capabilities. The system reduces the burden of infrastructure administration, simplifies the process of updating backend and frontend source code, and improves the reliability of game room data. The estimated monthly cost is extremely optimal because most services fall within the AWS Free Tier limit during the testing phase, with a fast payback period thanks to maximizing savings on fixed server resource costs.
 
-![IoT Weather Station Architecture](/images/2-Proposal/edge_architecture.jpeg)
+---
 
-![IoT Weather Platform Architecture](/images/2-Proposal/platform_architecture.jpeg)
+### 3. Solution Architecture 
+The platform applies an AWS Serverless architecture to manage data from 5 Raspberry Pi-based stations, scalable up to 15 stations. Data is ingested via AWS IoT Core, stored in an S3 data lake, and processed by AWS Glue Crawlers and ETL jobs to transform and load into another S3 bucket for analysis purposes. Lambda and API Gateway handle additional processing, while Amplify with Next.js provides a dashboard secured by Cognito. 
 
-### AWS Services Used
-- **AWS IoT Core**: Ingests MQTT data from 5 stations, scalable to 15.
-- **AWS Lambda**: Processes data and triggers Glue jobs (two functions).
-- **Amazon API Gateway**: Facilitates web app communication.
-- **Amazon S3**: Stores raw data in a data lake and processed outputs (two buckets).
-- **AWS Glue**: Crawlers catalog data, and ETL jobs transform and load it.
-- **AWS Amplify**: Hosts the Next.js web interface.
-- **Amazon Cognito**: Secures access for lab users.
+![image1](/images/2-Proposal/FinalDiagram.png)
 
-### Component Design
-- **Edge Devices**: Raspberry Pi collects and filters sensor data, sending it to IoT Core.
-- **Data Ingestion**: AWS IoT Core receives MQTT messages from the edge devices.
-- **Data Storage**: Raw data is stored in an S3 data lake; processed data is stored in another S3 bucket.
-- **Data Processing**: AWS Glue Crawlers catalog the data, and ETL jobs transform it for analysis.
-- **Web Interface**: AWS Amplify hosts a Next.js app for real-time dashboards and analytics.
-- **User Management**: Amazon Cognito manages user access, allowing up to 5 active accounts.
+
+*AWS Services Used* 
+- *AWS IoT Core*: Ingests MQTT data from 5 stations, scalable to 15. 
+- *AWS Lambda*: Processes data and triggers Glue jobs (2 functions). 
+- *Amazon API Gateway*: Communicates with the web application. 
+- *Amazon S3*: Stores raw data (data lake) and processed data (2 buckets). 
+- *AWS Glue*: Crawlers index data, ETL jobs transform and load data. 
+- *AWS Amplify*: Hosts the Next.js web interface. 
+- *Amazon Cognito*: Manages access permissions for lab users. 
+
+*Component Design* 
+- *Edge Devices*: Raspberry Pis collect and filter sensor data, sending it to IoT Core. 
+- *Data Ingestion*: AWS IoT Core receives MQTT messages from edge devices. 
+- *Data Storage*: Raw data is stored in an S3 data lake; processed data is stored in another S3 bucket. 
+- *Data Processing*: AWS Glue Crawlers index the data; ETL jobs transform it for analysis. 
+- *Web Interface*: AWS Amplify hosts the Next.js application for a real-time dashboard and analysis. 
+- *User Management*: Amazon Cognito limits active accounts to 5. 
 
 ### 4. Technical Implementation
-**Implementation Phases**
-This project has two parts—setting up weather edge stations and building the weather platform—each following 4 phases:
-- Build Theory and Draw Architecture: Research Raspberry Pi setup with ESP32 sensors and design the AWS serverless architecture (1 month pre-internship)
-- Calculate Price and Check Practicality: Use AWS Pricing Calculator to estimate costs and adjust if needed (Month 1).
-- Fix Architecture for Cost or Solution Fit: Tweak the design (e.g., optimize Lambda with Next.js) to stay cost-effective and usable (Month 2).
-- Develop, Test, and Deploy: Code the Raspberry Pi setup, AWS services with CDK/SDK, and Next.js app, then test and release to production (Months 2-3).
 
-**Technical Requirements**
-- Weather Edge Station: Sensors (temperature, humidity, rainfall, wind speed), a microcontroller (ESP32), and a Raspberry Pi as the edge device. Raspberry Pi runs Raspbian, handles Docker for filtering, and sends 1 MB/day per station via MQTT over Wi-Fi.
-- Weather Platform: Practical knowledge of AWS Amplify (hosting Next.js), Lambda (minimal use due to Next.js), AWS Glue (ETL), S3 (two buckets), IoT Core (gateway and rules), and Cognito (5 users). Use AWS CDK/SDK to code interactions (e.g., IoT Core rules to S3). Next.js reduces Lambda workload for the fullstack web app.
+#### Deployment Phases
+The project is comprehensively implemented through 4 sequential rolling phases:
+1.  **Research and architecture design**: Conduct an in-depth survey of the WebSocket API connection protocol on API Gateway, build the entity schema structure for DynamoDB NoSQL, and finalize the system graphic design model on the Draw.io online platform.
+2.  **Cost calculation and feasibility check**: Use the professional AWS Pricing Calculator tool from AWS to accurately estimate the operational budget and configure cost alert thresholds.
+3.  **Optimal architecture adjustment**: Fine-tune the entire model to a 100% Serverless solution. Migrate the web interface distribution layer to **AWS Amplify**, and integrate the CI/CD automation flow via **GitHub Actions + AWS SAM** to complete infrastructure as code (IaC) management.
+4.  **Development, testing, deployment**: Write business logic source code for Lambda using Node.js, complete the client-side application programming (Flutter client), organize the CI/CD workflow script files, and conduct load testing for connections using the wscat command-line tool.
 
-### 5. Timeline & Milestones
-**Project Timeline**
-- Pre-Internship (Month 0): 1 month for planning and old station review.
-- Internship (Months 1-3): 3 months.
-    - Month 1: Study AWS and upgrade hardware.
-    - Month 2: Design and adjust architecture.
-    - Month 3: Implement, test, and launch.
-- Post-Launch: Up to 1 year for research.
+#### Environment Technical Requirements
+* **Development Environment**: Workstation system pre-installed with AWS CLI v2, AWS SAM CLI, Node.js version 18+ environment, Flutter SDK toolkit, and the wscat library locally.
+* **Backend System (IaC)**: The entire component structure, from API Gateway and Lambda to DynamoDB, is centrally defined and explicitly managed in the `template.yaml` file of AWS SAM, strictly applying flexible configuration environment variables to avoid hardcoding the source code.
+* **Frontend Application (Flutter)**: Integrate the `amplifyconfiguration.dart` configuration link file to synchronize authentication with the Cognito User Pool. Use the `flutter_secure_storage` security library on the client to keep the JWT Token string absolutely safe.
 
-### 6. Budget Estimation
-You can find the budget estimation on the [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01).  
-Or you can download the [Budget Estimation File](../attachments/budget_estimation.pdf).
+---
 
-### Infrastructure Costs
-- AWS Services:
-    - AWS Lambda: $0.00/month (1,000 requests, 512 MB storage).
-    - S3 Standard: $0.15/month (6 GB, 2,100 requests, 1 GB scanned).
-    - Data Transfer: $0.02/month (1 GB inbound, 1 GB outbound).
-    - AWS Amplify: $0.35/month (256 MB, 500 ms requests).
-    - Amazon API Gateway: $0.01/month (2,000 requests).
-    - AWS Glue ETL Jobs: $0.02/month (2 DPUs).
-    - AWS Glue Crawlers: $0.07/month (1 crawler).
-    - MQTT (IoT Core): $0.08/month (5 devices, 45,000 messages).
+### 5. Roadmap & Deployment Milestones
+* **Pre-internship (Month 0)**: Spend 1 month researching in-depth the WebSocket real-time connection mechanism and drafting the preliminary architecture drawing on the Draw.io software.
+* **Internship (Months 1–3)**:
+    * **Month 1**: Master the AWS SAM CLI tool to automate the definition of IaC source code resources. Initialize the Cognito User Pool user management service and set up the IAM Role policy model according to the Least Privilege principle.
+    * **Month 2**: Initialize the structure of DynamoDB Tables storage partitions, configure the Index system to accelerate queries, and the TTL auto-deletion mechanism. Focus on developing processing source code for 4 Node.js Lambda functional functions and complete the data routing structure for the WebSocket API Gateway.
+    * **Month 3**: Complete the entire interface and functionality of the Flutter application, and configure standard GitHub Actions workflow script files to run testing and parallel deployment for both Frontend (Amplify) and Backend (SAM) components. Configure CloudWatch Alarms to automatically send email notifications if errors arise from Lambda.
 
-Total: $0.7/month, $8.40/12 months
+---
 
-- Hardware: $265 one-time (Raspberry Pi 5 and sensors).
+### 6. Budget Estimate
+The monthly operational budget estimate table below is calculated in detail based on the AWS Pricing Calculator tool for the Singapore region data center (`ap-southeast-1`):
+
+| AWS Service Component | Monthly Cost (USD) | Notes & Cost Optimization |
+| :--- | :--- | :--- |
+| **AWS Lambda** | 0.00 USD | Falls within the long-term Free Tier limit (First 1 million invocations are free). |
+| **Amazon API Gateway (WebSocket)** | 0.00 USD | Leverages the basic Free Tier plan (Completely free for 1 million exchanged messages). |
+| **Amazon Cognito** | 0.00 USD | No costs incurred for a small scale of Monthly Active Users (MAUs). |
+| **AWS Amplify** | ~0.35 USD | Accumulates low capacity costs based on the Web application's actual storage space. |
+| **Amazon DynamoDB** | ~0.30 USD | Applies the On-Demand pay-per-use configuration mode. |
+| **Amazon CloudWatch** | ~0.15 USD | Optimizes budget by limiting log trace Retention time to 14 days. |
+| **AWS WAF** | ~5.00 USD | Fixed maintenance fee applied for 1 basic Web ACL rule configuration at the edge layer. |
+| **TOTAL** | **~5.80 USD / month** | *Equivalent to about ~69.60 USD for a full year of operating the testing system.* |
+
+---
 
 ### 7. Risk Assessment
-#### Risk Matrix
-- Network Outages: Medium impact, medium probability.
-- Sensor Failures: High impact, low probability.
-- Cost Overruns: Medium impact, low probability.
 
-#### Mitigation Strategies
-- Network: Local storage on Raspberry Pi with Docker.
-- Sensors: Regular checks and spares.
-- Cost: AWS budget alerts and optimization.
+#### Risk Assessment Matrix
+* **Zombie Connection**: Occurs when users hide the game application into background mode but the WebSocket connection session is not fully released, causing the system to continue charging maintenance fees, leading to wasted network resources. *(Impact level: Medium | Probability of occurrence: High)*
+* **Cold Start Delay**: For Lambda functions that are not invoked continuously for a long time, the execution environment will be automatically revoked, leading to a delay of 1-3 seconds for the first user accessing it again as the system restarts the environment. *(Impact level: Low | Probability of occurrence: Medium)*
+* **Credential Leak**: Technical negligence leading to accidentally committing files containing dangerous security access keys (such as AWS Access Key/Secret Key) publicly to shared repositories on GitHub. *(Impact level: Very High | Probability of occurrence: Low)*
 
-#### Contingency Plans
-- Revert to manual methods if AWS fails.
-- Use CloudFormation for cost-related rollbacks.
+#### Mitigation Strategy & Contingency Plan
+* **Handling Zombie Connections**: The client application (Flutter Client) proactively catches application state change events and immediately disconnects the WebSocket upon detecting the user switching the app to the background. On the Backend, write code for the Lambda function integrating a periodic Heartbeat Ping/Pong check mechanism, while flexibly combining with the TTL auto-deletion configuration property on the DynamoDB database to thoroughly clean up all virtual connections.
+* **Minimizing Cold Starts**: Organize the initialization of all extended SDK connections (e.g., connections to DynamoDB) completely outside the main event handler function (`exports.handler`) to maximize the reuse of the execution environment from previous requests. Shrink the size of the backend deployment package using the optimized `npm ci --production` command.
+* **Absolute Source Code Security**: Fully declare `.env` environment definition files or sensitive configuration folders in the ignore list of `.gitignore` before pushing any source code to GitHub. At the same time, set up the AWS Billing Alert budget warning system to receive emergency Email notifications as soon as total costs exceed the initially established control threshold.
 
-### 8. Expected Outcomes
-#### Technical Improvements: 
-Real-time data and analytics replace manual processes.  
-Scalable to 10-15 stations.
-#### Long-term Value
-1-year data foundation for AI research.  
-Reusable for future projects.
+---
 
+### 8. Expected Outcomes 
+*Technical Improvements*: Real-time data and analytics replace manual processes. Expandable up to 10–15 stations. 
+*Long-term Value*: A 1-year data platform for AI research, reusable for future projects.
