@@ -1,40 +1,49 @@
 ---
-title: "Worklog Tuần 8"
-date: 2026-07-12
+title: "Nhật ký thực tập Tuần 8"
+date: 2026-06-05
 weight: 8
 chapter: false
-pre: " <b> 1.8. </b> "
+pre: "<b> 1.8. </b>"
 ---
 
+### Mục tiêu Tuần 8:
+* Nghiên cứu giải pháp thu thập, chuyển đổi và phân tích luồng nhật ký hệ thống quy mô lớn theo thời gian thực.
+* Tìm hiểu chiến lược và các công cụ dịch chuyển cơ sở dữ liệu từ hạ tầng On-premise lên đám mây an toàn.
+* Xây dựng hệ thống truy vấn dữ liệu trực tiếp giúp tối ưu hóa khả năng giám sát và khai thác thông tin hệ thống.
 
+### Danh sách công việc thực hiện:
 
-### Mục tiêu tuần 8:
+| Ngày | Nhiệm vụ | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| :--- | :--- | :--- | :--- | :--- |
+| **1** | **[Nghiên cứu Lab 19]:** Tìm hiểu kiến trúc xử lý luồng dữ liệu Analytics trên AWS, nghiên cứu cơ chế hoạt động của Amazon Kinesis và Amazon Athena. | 05/06/2026 | 05/06/2026 | [AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
+| **2** | **[Thực hành Lab 19 - Phần 1]:** Cấu hình Amazon Kinesis Data Firehose để thu thập và tự động chuyển luồng log hệ thống lưu trữ vào Amazon S3. | 06/06/2026 | 06/06/2026 | [AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
+| **3** | **[Thực hành Lab 19 - Phần 2]:** Khởi tạo AWS Glue Data Catalog để định nghĩa cấu trúc dữ liệu log và sử dụng Amazon Athena viết câu lệnh SQL truy vấn trực tiếp dữ liệu. | 07/06/2026 | 07/06/2026 | [AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
+| **4** | **[Nghiên cứu Lab 20]:** Khám phá các mô hình di chuyển hạ tầng Migration nâng cao, nghiên cứu công cụ dịch chuyển cơ sở dữ liệu AWS Database Migration Service (DMS). | 08/06/2026 | 08/06/2026 | [AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
+| **5** | **[Thực hành Lab 20]:** Cấu hình Replication Instance, thiết lập Source/Target Endpoints và tạo tác vụ dịch chuyển dữ liệu (Migration Task) giả lập. | 09/06/2026 | 09/06/2026 | [AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
+| **6** | **[Thực hành Lab 20 - Kiểm thử]:** Vận hành tác vụ chuyển đổi dữ liệu, kiểm tra tính toàn vẹn của cấu trúc database sau chuyển đổi và thực hiện giải phóng tài nguyên. | 10/06/2026 | 10/06/2026 | [AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
 
-* Nghiên cứu sâu toàn diện các dịch vụ giải pháp Cơ sở dữ liệu của hạ tầng AWS.
-* Phân tích thiết kế cấu trúc dữ liệu và chuẩn bị kiến trúc phân vùng lưu trữ cho hệ thống.
+---
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Tìm hiểu kiến trúc Amazon RDS (Cơ sở dữ liệu quan hệ) <br>&emsp; + Các loại Database Engine trợ giúp (MySQL, PostgreSQL) <br>&emsp; + Tính năng tự động hóa quản lý hệ thống | 08/06/2026   | 08/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 3   | - Nghiên cứu kiến trúc sẵn sàng cao HA cho dữ liệu <br>&emsp; + Multi-AZ Deployments (Đồng bộ dữ liệu đa vùng) <br>&emsp; + Read Replicas (Bản sao mở rộng luồng đọc) | 09/06/2026   | 09/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tìm hiểu giải pháp cơ sở dữ liệu phi quan hệ NoSQL <br>&emsp; + Amazon DynamoDB cơ bản <br>&emsp; + Khái niệm cơ chế khóa Partition Keys và Sort Keys <br>&emsp; + Chế độ Provisioned vs On-demand | 10/06/2026   | 10/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Phân tích đánh giá kịch bản Use-case thực tế nên chọn lựa RDS hay DynamoDB <br> - Thiết kế phác thảo một sơ đồ cấu trúc cơ sở dữ liệu quan hệ mẫu | 11/06/2026   | 11/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - Tìm hiểu nguyên lý thiết kế phân vùng lưu trữ an toàn cách ly mạng cho Database <br> - Tìm hiểu tổng quan khái niệm cấu hình DB Subnet Groups | 12/06/2026   | 12/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
+### Chi tiết tiến độ hằng ngày (Cập nhật: 10/06/2026)
 
-### Kết quả đạt được tuần 8:
+**Nội dung đã thực hiện ngày 09/06 (Trọng tâm: Lab 20):**
+* Hoàn thành việc thiết lập và cấu hình các điểm kết nối mã hóa cho dịch vụ dịch chuyển cơ sở dữ liệu độc lập AWS DMS.
+* Định nghĩa thành công các quy tắc ánh xạ bảng dữ liệu (Table mappings) và khởi tạo tiến trình Replication để chuẩn bị cho chu trình đồng bộ cấu trúc hệ thống.
 
-* Phân biệt sâu sắc các mô hình kiến trúc lưu trữ dữ liệu có cấu trúc và phi cấu trúc đám mây:
-  * Amazon RDS phù hợp cho các truy vấn quan hệ phức tạp cần tính toàn vẹn cao (ACID)
-  * Amazon DynamoDB đáp ứng các ứng dụng quy mô lớn cần độ trễ micro-second ổn định
-  * ...
+**Kế hoạch ngày 10/06 (Trọng tâm: Lab 20):**
+* Kích hoạt tác vụ Migration Task thực thi quá trình chuyển đổi dữ liệu giả lập từ nguồn máy chủ nội bộ lên dịch vụ cơ sở dữ liệu đám mây.
+* Xác thực đối chiếu số lượng bản ghi giữa hai môi trường để đảm bảo không xảy ra lỗi mất mát cấu trúc thông tin, sau đó thực hiện xóa bỏ toàn bộ hạ tầng thử nghiệm nhằm bảo vệ hạn mức credit tài khoản.
 
-* Nắm vững các mô hình thiết kế đảm bảo dữ liệu không bị gián đoạn hoạt động:
-  * Mô hình Multi-AZ tự động chuyển đổi dự phòng (Failover) khi có thảm họa phần cứng
-  * Mô hình Read Replicas phân tách tải, tăng tốc độ xử lý cho các hệ thống đọc nhiều
-  * ...
+---
 
-* Hiểu rõ cơ chế bảo mật và quản lý tệp lưu trữ sao lưu tự động (Automated Snapshots).
-* Thiết kế thành công lược đồ dữ liệu logic, xác định rõ ràng luồng liên kết thực thể phù hợp để chuẩn bị triển khai lên cloud thực tế.
-* ...
+### Kết quả đạt được trong Tuần 8:
 
+* **Xây dựng chu trình phân tích luồng dữ liệu lớn (Lab 19):**
+    * Làm chủ giải pháp thiết lập đường ống thu thập log tự động, xử lý triệt để bài toán lưu trữ và phân tích dữ liệu phi cấu trúc quy mô lớn.
+    * Đạt năng lực sử dụng các công cụ truy vấn không máy chủ để bóc tách thông tin hệ thống trực tiếp mà không cần khởi chạy cơ sở dữ liệu truyền thống.
+* **Làm chủ quy trình quản trị dịch chuyển hạ tầng (Lab 20):**
+    * Thay đổi tư duy chuyển đổi dữ liệu thủ công rủi ro cao sang mô hình dịch chuyển tự động, đảm bảo hệ thống đích hoạt động liên tục.
+    * Thành thạo kỹ năng cấu hình thiết lập các tham số kết nối, xử lý ánh xạ dữ liệu đồng bộ mượt mà giữa các nền tảng database khác nhau.
+* **Nâng cao tiêu chuẩn kỹ thuật & Quản lý tài nguyên:**
+    * Phát triển năng lực kiểm thử và đối soát tính toàn vẹn của hệ thống dữ liệu sau khi thực hiện cấu hình nâng cao.
+    * Nghiêm túc duy trì quy trình giải phóng môi trường Lab sau khi hoàn tất đánh giá kỹ thuật, đồng bộ đầy đủ dữ liệu báo cáo lên GitHub.

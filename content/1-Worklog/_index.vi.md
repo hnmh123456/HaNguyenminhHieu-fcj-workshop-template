@@ -1,39 +1,35 @@
 ---
-title: "Nhật ký công việc"
-date: 2026-07-12
+title: "Nhật ký làm việc"
+date: 2024-07-12
 weight: 1
 chapter: false
 pre: " <b> 1. </b> "
 ---
 
+**Trên trang này**, bạn sẽ cần giới thiệu worklog của mình. **Bạn** đã hoàn thành nó như thế nào? Bạn đã mất bao nhiêu tuần để hoàn thành chương trình? **Bạn** đã làm gì trong những tuần đó?
 
+Thông thường, và theo tiêu chuẩn, một worklog được thực hiện trong khoảng 3 tháng (trong suốt thời gian thực tập) với nội dung hàng tuần như sau:
 
-**Trong trang này** bạn sẽ cần giới thiệu worklog của bạn **như thế nào**? Bạn hoàn thành chương trình trong vòng **bao nhiêu tuần**? Bạn **đã làm gì** trong các tuần đó?
+**Tuần 1:** [Làm quen tài khoản AWS, AWS CLI và Amazon EC2 & EBS](1.1-week1/)
 
+**Tuần 2:** [Quản lý phân quyền với IAM, thiết kế mạng với Amazon VPC và lưu trữ đối tượng với Amazon S3](1.2-week2/)
 
-Thông thường và cũng là tiêu chuẩn, một worklog được thực hiện trong khoảng 3 tháng (trong suốt thời gian thực tập) với nội dung các tuần như sau:
+**Tuần 3:** [Tự động co giãn tài nguyên với EC2 Auto Scaling và phát triển ứng dụng Serverless với AWS Lambda](1.3-week3/)
 
-**Tuần 1:** [Làm quen với hạ tầng AWS, giao diện Console và các dịch vụ cơ bản](1.1-week1/)
+**Tuần 4:** [Đóng gói ứng dụng với Docker/Amazon ECS và xây dựng CI/CD với AWS CodePipeline](1.4-week4/)
 
-**Tuần 2:** [Thiết kế và cấu hình mạng Đám mây ảo riêng biệt (Amazon VPC)](1.2-week2/)
+**Tuần 5:** [Quản trị an toàn & tuân thủ với AWS CloudTrail, AWS Config và giám sát hệ thống với Amazon CloudWatch](1.5-week5/)
 
-**Tuần 3:** [Triển khai lưu trữ Website tĩnh tốc độ cao với Amazon S3 và CloudFront](1.3-week3/)
+**Tuần 6:** [Lưu trữ tệp tin dùng chung với Amazon EFS và quản trị hạ tầng tự động với AWS Systems Manager](1.6-week6/)
 
-**Tuần 4:** [Khám phá hệ sinh thái Cơ sở dữ liệu và thiết lập máy chủ RDS MySQL](1.4-week4/)
+**Tuần 7:** [Tối ưu hóa chi phí (Cost Optimization) và xây dựng giải pháp sao lưu - phục hồi với AWS Backup](1.7-week7/)
 
-**Tuần 5:** [Xây dựng kiến trúc sẵn sàng cao với Load Balancer và Auto Scaling](1.5-week5/)
+**Tuần 8:** [Phân tích luồng dữ liệu với Amazon Kinesis, Athena và dịch chuyển cơ sở dữ liệu với AWS DMS](1.8-week8/)
 
-**Tuần 6:** [Nghiên cứu chuyên sâu các Lớp lưu trữ S3 và quy tắc vòng đời dữ liệu](1.6-week6/)
+**Tuần 9:** [Hạ tầng mạng nâng cao với AWS Transit Gateway và ứng dụng trí tuệ nhân tạo tạo sinh với Amazon Bedrock](1.9-week9/)
 
-**Tuần 7:** [Bảo mật điểm cuối hệ thống CDN sử dụng CloudFront và S3 OAC](1.7-week7/)
+**Tuần 10:** [Quản lý hạ tầng bằng mã (IaC) với AWS CloudFormation, tối ưu bộ nhớ đệm với Amazon ElastiCache và triển khai đồ án nhóm](1.10-week10/)
 
-**Tuần 8:** [Phân tích kiến trúc cơ sở dữ liệu và cơ chế dự phòng thảm họa Multi-AZ](1.8-week8/)
+**Tuần 11:** [Hoàn thiện đồ án nhóm, tối ưu chi phí nâng cao và xử lý sự cố (Troubleshooting) thực tế](1.11-week11/)
 
-**Tuần 9:** [Thiết lập mạng lưới đa tầng kết nối máy chủ EC2 với phân vùng DB nội bộ](1.9-week9/)
-
-**Tuần 10:** [Phân tích nguyên lý tự co giãn tài nguyên, Health Checks và chịu tải hệ thống](1.10-week10/)
-
-**Tuần 11:** [Kiểm thử khả năng tự phục hồi (Self-healing) với Auto Scaling Groups đa vùng](1.11-week11/)
-
-**Tuần 12:** [Triển khai kiến trúc không máy chủ (Serverless) với AWS Lambda và CloudWatch](1.12-week12/)
-
+**Tuần 12:** [Bảo vệ báo cáo cuối kỳ, bàn giao sản phẩm và tổng kết quá trình thực tập](1.12-week12/)

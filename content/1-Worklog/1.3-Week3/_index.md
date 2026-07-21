@@ -1,48 +1,48 @@
 ---
-title: "Week 3 Worklog"
-date: 2026-07-12
+title: "Internship Worklog Week 3"
+date: 2026-05-01
 weight: 3
 chapter: false
-pre: " <b> 1.3. </b> "
+pre: "<b> 1.3. </b>"
 ---
 
-
-
 ### Week 3 Objectives:
+* Master the mechanism for automatically scaling server resources based on real infrastructure demand.
+* Approach application-development thinking for Serverless architecture, optimizing code-execution performance.
+* Set up an automated data-connection cycle between the logic-processing layer and the cloud API communication layer.
 
-* Master the fundamentals of object storage with Amazon S3.
-* Deploy a highly available static website using a CDN (CloudFront).
+### Tasks Implemented This Week:
 
-### Tasks to be carried out this week:
-| Day | Task | Start Date | Completion Date | Reference Material |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Learn Amazon S3 basics <br>&emsp; + Buckets & Objects <br>&emsp; + Storage Classes (Standard, IA, Glacier) <br>&emsp; + S3 Versioning <br> | 04/05/2026   | 04/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 3   | - Learn about Content Delivery Networks (CDN) <br>&emsp; + Amazon CloudFront <br>&emsp; + Edge Locations <br>&emsp; + Origin Access Control (OAC) | 05/05/2026   | 05/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Understand S3 Bucket Policies & IAM Policies <br> - Prepare static website source code (HTML/CSS) <br> | 06/05/2026   | 06/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - **Practice:** <br>&emsp; + Create S3 Bucket <br>&emsp; + Configure Static Website Hosting <br>&emsp; + Upload HTML/CSS files | 07/05/2026   | 07/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Configure CloudFront to distribute S3 content <br>&emsp; + Block direct public access to S3 <br>&emsp; + Verify CloudFront URL | 08/05/2026   | 08/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| Day | Task Details | Start Date | Completion Date | Reference Material |
+| :--- | :--- | :--- | :--- | :--- |
+| **1** | **[Researching Lab 6]:** Analyzed how Amazon EC2 Auto Scaling works, load-monitoring mechanisms, and Launch Template configurations. | 01/05/2026 | 01/05/2026 | [AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
+| **2** | **[Practicing Lab 6 - Part 1]:** Configured a sample server template, created an Auto Scaling Group, and set up a Manual Scaling policy. | 02/05/2026 | 02/05/2026 | [AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
+| **3** | **[Practicing Lab 6 - Part 2]:** Configured Dynamic Scaling and simulated system load to test automatic scale-in/scale-out of EC2 instances. | 03/05/2026 | 03/05/2026 | [AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
+| **4** | **[Researching Lab 8]:** Explored AWS Serverless architecture, event-driven mechanisms, and how AWS Lambda works. | 04/05/2026 | 04/05/2026 | [AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
+| **5** | **[Practicing Lab 8 - Part 1]:** Wrote and deployed a logic-processing function on AWS Lambda, and set up a test runtime environment. | 05/05/2026 | 05/05/2026 | [AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
+| **6** | **[Practicing Lab 8 - Part 2]:** Integrated AWS Lambda with Amazon API Gateway, exposed a Function URL to handle external HTTP requests, and cleaned up resources. | 06/05/2026 | 06/05/2026 | [AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
 
+---
 
-### Week 3 Achievements:
+### Daily Progress Details
 
-* Differentiated clearly between Object storage (S3) and Block storage (EBS).
-* Understood how to optimize storage costs through S3 Storage Classes:
-  * S3 Standard
-  * S3 Infrequent Access (IA)
-  * S3 Glacier
-  * ...
+**Tasks Completed on 05/05 (Focus Area: Lab 8):**
+* Created and configured a Lambda function that executes logic tasks without managing an underlying operating system.
+* Configured the runtime environment, allocated appropriate memory, and optimized the input-handling code ahead of the next networking-integration step.
 
-* Managed cloud data securely using advanced features:
-  * S3 Versioning
-  * Lifecycle Rules
-  * S3 Bucket Policies
+**Planned Tasks for 06/05 (Focus Area: Lab 8):**
+* Create and connect an Amazon API Gateway endpoint as the entry point for incoming user requests.
+* Route HTTP traffic directly to the AWS Lambda function via a Function URL, test live requests from the browser, then tear down the test infrastructure to protect account limits.
 
-* Successfully deployed a high-speed static website on a global scale, including:
-  * Initializing and uploading resources to S3
-  * Configuring CDN via CloudFront
-  * Applying OAC to secure the S3 origin
-  * ...
+---
 
-* Understood how to access web content securely through a generated CloudFront domain.
-* ...
+### Accomplishments in Week 3:
 
+* **Automated Compute Scaling (Lab 6):**
+    * Mastered the design thinking for self-healing, elastically scaling systems driven by concrete performance metrics (CPU, RAM).
+    * Developed proficiency building standardized server templates and configuring alert thresholds that help optimize enterprise infrastructure costs.
+* **Serverless Architecture Development (Lab 8):**
+    * Shifted the operations mindset from managing an operating system to managing independent, event-driven code execution.
+    * Gained skills building high-speed cloud APIs, smoothly wiring event-driven compute services together into a complete web application.
+* **Resource Optimization & Supporting Skills:**
+    * Strengthened log-analysis capability using real system load metrics, while continuing to release resources promptly and keep lab source code synchronized on GitHub.

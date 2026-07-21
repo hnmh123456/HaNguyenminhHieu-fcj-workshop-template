@@ -1,42 +1,49 @@
 ---
-title: "Worklog Tuần 10"
-date: 2026-07-12
+title: "Nhật ký thực tập Tuần 10"
+date: 2026-06-19
 weight: 10
 chapter: false
-pre: " <b> 1.10. </b> "
+pre: "<b> 1.10. </b>"
 ---
 
+### Mục tiêu Tuần 10:
+* Tiếp tục hoàn thành các bài Lab chuyên sâu về tối ưu hóa hiệu năng và quản lý cấu trúc hạ tầng đám mây.
+* Tích cực phối hợp cùng các thành viên trong nhóm để triển khai, cấu hình và đồng bộ các phân hệ của bài tập nhóm.
+* Đóng gói mã nguồn và chuẩn bị tài liệu kỹ thuật phục vụ cho việc nghiệm thu đồ án phân công.
 
+### Danh sách công việc thực hiện:
 
-### Mục tiêu tuần 10:
+| Ngày | Nhiệm vụ | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| :--- | :--- | :--- | :--- | :--- |
+| **1** | **[Nghiên cứu Lab 23 & Họp nhóm]:** Tìm hiểu giải pháp quản lý hạ tầng bằng mã (Infrastructure as Code - IaC). Họp nhóm phân chia nhiệm vụ thiết kế kiến trúc tổng thể cho bài tập lớn. | 19/06/2026 | 19/06/2026 | [AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
+| **2** | **[Thực hành Lab 23 & Làm bài nhóm]:** Khởi tạo template AWS CloudFormation, thực hiện deploy tự động hạ tầng VPC. Phối hợp với nhóm để tích hợp module mạng dùng chung. | 20/06/2026 | 20/06/2026 | [AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
+| **3** | **[Nghiên cứu Lab 24]:** Tìm hiểu các phương pháp tối ưu hóa bộ nhớ đệm đám mây (Caching), nghiên cứu cơ chế hoạt động của Amazon ElastiCache. | 21/06/2026 | 21/06/2026 | [AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
+| **4** | **[Thực hành Lab 24 & Làm bài nhóm]:** Triển khai cụm Redis/Memcached trên ElastiCache. Hỗ trợ nhóm cấu hình kết nối database an toàn giữa các phân hệ máy chủ ảo. | 22/06/2026 | 22/06/2026 | [AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
+| **5** | **[Làm bài nhóm]:** Ngồi lại với cả nhóm để ráp các phần bài tập lại với nhau, chạy thử toàn bộ hệ thống xem có lỗi kết nối nào không. | 23/06/2026 | 23/06/2026 | [AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
+| **6** | **[Hoàn thiện file nhóm]:** Cùng viết tài liệu hướng dẫn, chụp lại ảnh kết quả chạy thành công và xóa các con server Lab cá nhân để đỡ tốn tiền credit. | 24/06/2026 | 24/06/2026 | [AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
 
-* Tiếp thu sâu sắc các lý thuyết và giải pháp hạ tầng có khả năng tự phục hồi, chống chịu lỗi và tự động co giãn tài nguyên đám mây.
-* Hiểu rõ cơ chế phối hợp hoạt động của hệ thống Cân bằng tải và Nhóm co giãn tự động.
+---
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Tìm hiểu dịch vụ cân bằng tải Elastic Load Balancing (ELB) <br>&emsp; + Cơ chế Application Load Balancer (ALB) xử lý tầng 7 <br>&emsp; + Cơ chế Network Load Balancer (NLB) xử lý tầng 4 | 22/06/2026   | 22/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 3   | - Nghiên cứu sâu thành phần cấu tạo điều hướng định tuyến luồng mạng <br>&emsp; + Cấu hình Target Groups (Nhóm mục tiêu) <br>&emsp; + Quy tắc Health Checks (Kiểm tra trạng thái sức khỏe) | 23/06/2026   | 23/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tìm hiểu hệ thống co giãn quy mô máy chủ tự động Amazon EC2 Auto Scaling <br>&emsp; + Vai trò kiến trúc Auto Scaling Groups (ASG) <br> | 24/06/2026   | 24/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Nghiên cứu tệp cấu hình khuôn mẫu hạ tầng bất biến <br>&emsp; + Thiết kế Launch Templates <br> - Phân tích các chính sách kích hoạt co giãn hệ thống (Scaling Policies) | 25/06/2026   | 25/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - Đọc tài liệu phân tích Use-case thực tế từ các doanh nghiệp lớn xử lý hiện tượng nghẽn mạng đột biến nhờ công cụ tự động co giãn | 26/06/2026   | 26/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
+### Chi tiết tiến độ hằng ngày (Cập nhật: 24/06/2026)
 
-### Kết quả đạt được tuần 10:
+**Nội dung đã thực hiện ngày 23/06 (Trọng tâm: Tiến độ bài tập nhóm):**
+* Đã ngồi kết nối phần app với phần database cùng các thành viên trong nhóm để hệ thống chạy thông suốt.
+* Kiểm tra và sửa lại mấy chỗ lỗi chặn cổng ở Security Group giữa các máy chủ của mấy bạn khác trong nhóm để dữ liệu truyền qua lại không bị lỗi.
 
-* Nắm vững các thuật ngữ cốt lõi và tiêu chuẩn thiết kế kiến trúc đám mây nâng cao:
-  * Scalability (Tính mở rộng linh hoạt theo chiều ngang và chiều dọc)
-  * High Availability (Tính sẵn sàng cao giúp ứng dụng hoạt động không ngừng nghỉ)
-  * Elasticity (Tính đàn hồi tự động thu gom hoặc nhả tài nguyên theo tải thực tế)
-  * ...
+**Kế hoạch ngày 24/06 (Trọng tâm: Hồ sơ bài tập nhóm):**
+* Phối hợp viết nốt phần mô tả kỹ thuật cho bài tập lớn của nhóm, copy code và đẩy mấy file cấu hình chung lên kho Git nhóm.
+* Vào lại AWS Console kiểm tra và tắt hết mấy con EC2, dịch vụ làm Lab cá nhân mấy bữa trước đi để bảo vệ tài khoản Free Tier/Credit khỏi bị trừ tiền.
 
-* Hiểu sâu sắc kỹ thuật phân phối luồng dữ liệu thông minh trên Internet:
-  * Phân biệt rõ ALB xử lý định tuyến thông minh dựa trên URL/Path ở tầng ứng dụng và NLB tối ưu hiệu năng tốc độ siêu cao ở tầng mạng giao thức TCP
-  * Cơ chế giám sát liên tục để cô lập các máy chủ lỗi thông qua định kỳ Health Checks
-  * ...
+---
 
-* Thấu hiểu giải pháp nhân bản và quản lý cấu hình hệ thống đồng loạt tự động:
-  * Sử dụng Launch Templates làm nền móng chuẩn hóa môi trường cho mọi máy ảo phát sinh mới
-  * Nắm rõ cách thiết lập ngưỡng cảnh báo CPU/RAM để kích hoạt co giãn tự động hợp lý
-* ...
+### Kết quả đạt được trong Tuần 10:
 
+* **Tiếp thu công nghệ hạ tầng tự động và lưu trữ đệm (Lab 23 & 24):**
+    * Làm chủ tư duy triển khai hệ thống bằng mã nguồn, tối ưu hóa tốc độ khởi tạo môi trường doanh nghiệp quy mô lớn qua các tệp template cấu trúc.
+    * Nắm vững kỹ năng tối ưu hóa hiệu năng đọc/ghi dữ liệu ứng dụng, giảm thiểu độ trễ truy vấn thông qua việc triển khai các lớp lưu trữ đệm.
+* **Nâng cao năng lực làm việc nhóm kỹ thuật:**
+    * Thúc đẩy kỹ năng giao tiếp và phối hợp kỹ thuật hiệu quả khi tích hợp hệ thống phân tán phức tạp với các thành viên khác trong đội ngũ.
+    * Đạt được tư duy bao quát về kiến trúc hệ thống, biết cách đồng bộ hóa công việc cá nhân khớp với tiến độ chung của toàn đội.
+* **Chuẩn hóa quy trình kỹ sư & Quản lý tài nguyên:**
+    * Phát triển năng lực đóng gói mã nguồn và xây dựng hồ sơ kỹ thuật đồ án phối hợp chuẩn chỉnh theo tiêu chuẩn vận hành thực tế.
+    * Nghiêm túc duy trì quy trình giải phóng môi trường Lab cá nhân để tối ưu ngân sách tài khoản, đồng bộ đầy đủ nhật ký lên GitHub.

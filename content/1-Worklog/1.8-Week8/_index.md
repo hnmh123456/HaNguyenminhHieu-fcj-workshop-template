@@ -1,41 +1,48 @@
 ---
-title: "Week 8 Worklog"
-date: 2026-07-12
+title: "Internship Worklog Week 8"
+date: 2026-06-05
 weight: 8
 chapter: false
-pre: " <b> 1.8. </b> "
+pre: "<b> 1.8. </b>"
 ---
 
-
-
 ### Week 8 Objectives:
+* Research a solution for collecting, transforming, and analyzing large-scale system log streams in real time.
+* Study strategies and tools for securely migrating databases from on-premises infrastructure to the cloud.
+* Build a direct data-query system to improve monitoring and information-mining capability.
 
-* Conduct a comprehensive study on AWS cloud database service offerings.
-* Analyze data schemas and design network partition strategies for storage layers.
+### Tasks Implemented This Week:
 
-### Tasks to be carried out this week:
-| Day | Task | Start Date | Completion Date | Reference Material |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Study Amazon RDS architecture (Relational Databases) <br>&emsp; + Supported Database Engines (MySQL, PostgreSQL) <br>&emsp; + Automated platform management features | 08/06/2026 | 08/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 3   | - Research High Availability (HA) models for data storage <br>&emsp; + Multi-AZ Deployments (Synchronous data replication) <br>&emsp; + Read Replicas (Horizontal scaling for read workloads) | 09/06/2026 | 09/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Learn non-relational NoSQL database options <br>&emsp; + Amazon DynamoDB core elements <br>&emsp; + Key concepts of Partition Keys and Sort Keys <br>&emsp; + Provisioned vs On-demand capacity modes | 10/06/2026 | 10/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Analyze business use-cases to evaluate when to choose RDS vs DynamoDB <br> - Sketch a sample logical relational database schema template | 11/06/2026 | 11/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - Study network isolation principles to safely secure cloud databases <br> - Understand the basic functionalities of DB Subnet Groups | 12/06/2026 | 12/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| Day | Task Details | Start Date | Completion Date | Reference Material |
+| :--- | :--- | :--- | :--- | :--- |
+| **1** | **[Researching Lab 19]:** Studied Analytics data-stream processing architecture on AWS, including Amazon Kinesis and Amazon Athena. | 05/06/2026 | 05/06/2026 | [AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
+| **2** | **[Practicing Lab 19 - Part 1]:** Configured Amazon Kinesis Data Firehose to collect and automatically deliver the system log stream into Amazon S3. | 06/06/2026 | 06/06/2026 | [AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
+| **3** | **[Practicing Lab 19 - Part 2]:** Created an AWS Glue Data Catalog to define the log data schema and used Amazon Athena to query the data directly with SQL. | 07/06/2026 | 07/06/2026 | [AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
+| **4** | **[Researching Lab 20]:** Explored advanced Migration models and the AWS Database Migration Service (DMS) tool. | 08/06/2026 | 08/06/2026 | [AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
+| **5** | **[Practicing Lab 20]:** Configured a Replication Instance, set up Source/Target Endpoints, and created a simulated Migration Task. | 09/06/2026 | 09/06/2026 | [AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
+| **6** | **[Practicing Lab 20 - Testing]:** Ran the migration task, verified database-structure integrity after the transfer, and released resources. | 10/06/2026 | 10/06/2026 | [AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
 
+---
 
-### Week 8 Achievements:
+### Daily Progress Details
 
-* Differentiated structural variations between relational and non-relational cloud data storage engines:
-  * Amazon RDS addresses intricate transactional queries needing ACID compliance parameters.
-  * Amazon DynamoDB satisfies high-scale applications requiring predictable sub-millisecond latencies.
-  * ...
+**Tasks Completed on 09/06 (Focus Area: Lab 20):**
+* Set up and configured encrypted connection endpoints for the standalone AWS DMS database-migration service.
+* Defined table-mapping rules and started the Replication process to prepare for schema synchronization.
 
-* Mastered architectural designs optimized to maintain continuous data operations:
-  * Multi-AZ failover frameworks protecting systems against hardware infrastructure outages.
-  * Read Replica separation models increasing performance for read-heavy system structures.
-  * ...
+**Planned Tasks for 10/06 (Focus Area: Lab 20):**
+* Trigger the Migration Task to run the simulated data transfer from the on-premises source to the cloud database service.
+* Reconcile record counts between both environments to confirm no data loss occurred, then tear down the test infrastructure to protect account credit.
 
-* Grasped backend administrative features surrounding managed automated backup procedures (Automated Snapshots).
-* Created a clean logical data schema defining entity relationships clearly before physical deployment workflows.
-* ...
+---
 
+### Accomplishments in Week 8:
+
+* **Large-Scale Data-Stream Analytics (Lab 19):**
+    * Mastered setting up an automated log-collection pipeline, solving the challenge of storing and analyzing large-scale unstructured data.
+    * Gained the ability to query system information directly with serverless tools, without standing up a traditional database.
+* **Infrastructure Migration Administration (Lab 20):**
+    * Shifted from risky manual data conversion to an automated migration model that keeps the target system running continuously.
+    * Developed skills configuring connection parameters and handling smooth, synchronized data mapping between different database platforms.
+* **Raised Technical Standards & Resource Management:**
+    * Strengthened the ability to validate data-system integrity after advanced configuration work, while keeping the lab environment clean and report data synced to GitHub.

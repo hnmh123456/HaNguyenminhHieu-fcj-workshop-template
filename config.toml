@@ -1,6 +1,6 @@
-baseURL = "https://khanhtruong.netlify.app/"
+baseURL = "https://hnmh123456.github.io/HaNguyenminhHieu-fcj-workshop-template/"
 relativeURLs = false
-canonifyURLs = false
+canonifyURLs = true
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = true
 
@@ -17,7 +17,7 @@ home = [ "HTML", "RSS", "JSON"]
   # Git hub repo link
   editURL = ""
   description = ""
-  author = "thienlh@thienlu.com"
+  author = "hanguyenminhhieu123@gmail.com"
   showVisitedLinks = true
   disableBreadcrumb = false
   disableNextPrev = false

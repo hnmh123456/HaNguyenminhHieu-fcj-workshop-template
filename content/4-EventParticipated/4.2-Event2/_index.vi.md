@@ -3,7 +3,7 @@ title : "Sự kiện 2: FCAJ Community Day - June 2026"
 date : 2026-06-27
 weight : 3
 chapter : false
-pre : " <b> 4.3. </b> "
+pre : " <b> 4.2. </b> "
 ---
 
 ### Mục Đích Của Sự Kiện

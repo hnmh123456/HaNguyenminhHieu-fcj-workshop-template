@@ -1,45 +1,48 @@
 ---
-title: "Week 11 Worklog"
-date: 2026-07-12
+title: "Internship Worklog Week 11"
+date: 2026-06-26
 weight: 11
 chapter: false
-pre: " <b> 1.11. </b> "
+pre: "<b> 1.11. </b>"
 ---
 
-
-
 ### Week 11 Objectives:
+* Finish the remaining final labs on advanced cloud administration and security.
+* Focus with the team on fixing bugs, optimizing, and finalizing the last features of the group project.
+* Prepare presentation materials and re-check the entire system before the final report.
 
-* Deploy a resilient system architecture capable of automated scaling and load balancing.
-* Implement a connected Application Load Balancer and Auto Scaling Group across multiple zones (Lab 6).
+### Tasks Implemented This Week:
 
-### Tasks to be carried out this week:
-| Day | Task | Start Date | Completion Date | Reference Material |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - **Practice (Part 1):** <br>&emsp; + Create an EC2 Launch Template blueprint <br>&emsp; + Input shell script kịch bản into User Data to pre-install Apache servers | 29/06/2026 | 29/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 3   | - **Practice (Part 2):** <br>&emsp; + Build a Target Group mapping HTTP traffic on Port 80 <br>&emsp; + Launch a public-facing Application Load Balancer (ALB) | 30/06/2026 | 30/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - **Practice (Part 3):** <br>&emsp; + Initialize an Auto Scaling Group (ASG) linked to the Launch Template <br>&emsp; + Distribute the ASG footprint across 2 distinct Availability Zones | 01/07/2026 | 01/07/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - **Practice (Part 4):** <br>&emsp; + Define capacity boundaries: Desired = 2, Min = 2, Max = 4 instances <br>&emsp; + Register the ASG cluster with the active ALB Health Check trackers | 02/07/2026 | 02/07/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice (Part 5):** <br>&emsp; + Simulate a disaster scenario by terminating a running instance manually <br>&emsp; + Monitor the system detecting failure and provisioning a replacement <br>&emsp; + Clean up systems | 03/07/2026 | 03/07/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| Day | Task Details | Start Date | Completion Date | Reference Material |
+| :--- | :--- | :--- | :--- | :--- |
+| **1** | **[Researching Lab 25 & Team Meeting]:** Studied advanced cost-management and resource-optimization methods. Met with the team to finalize remaining parts of the group project. | 26/06/2026 | 26/06/2026 | [AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
+| **2** | **[Practicing Lab 25 & Group Project]:** Set up cost reports and alert thresholds. Reviewed IAM permissions for the shared project together with the team. | 27/06/2026 | 27/06/2026 | [AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
+| **3** | **[Researching Lab 26]:** Comprehensively reviewed the advanced Cloud concepts learned so far, and studied real-world troubleshooting practices. | 28/06/2026 | 28/06/2026 | [AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
+| **4** | **[Practicing Lab 26 & Group Project]:** Practiced server- and network-failure scenarios. Supported the team in optimizing page-load speed for the shared project. | 29/06/2026 | 29/06/2026 | [AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
+| **5** | **[Group Bug-Fixing]:** Worked with teammates to fix the last remaining bugs and checked for any unstable parts of the system. | 30/06/2026 | 30/06/2026 | [AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
+| **6** | **[Wrap-up & Cleanup]:** Finalized the report file, thoroughly cleaned up resources, and shut down unused services to protect the account. | 01/07/2026 | 01/07/2026 | [AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
 
+---
 
-### Week 11 Achievements:
+### Daily Progress Details
 
-* Successfully constructed and validated a Self-healing cloud infrastructure layout:
-  * Automated application server staging routines cleanly using shell script configurations within User Data blocks.
-  * Channeled incoming connection pathways evenly to background computing targets via a singular ALB DNS endpoint.
-  * ...
+**Tasks Completed on 30/06 (Focus Area: Finalizing the Group Project):**
+* Reviewed data flows carefully as a team, ensuring the application no longer errors under concurrent access.
+* Fixed a few small networking-layer configuration issues so servers communicate faster and more reliably.
 
-* Realized full system disaster recovery planning at a data center scale:
-  * Protected service availability lines by stretching virtual server footprints across physical Availability Zone boundaries.
-  * Confirmed backup zones automatically absorb standard visitor loads if one data sector becomes isolated.
-  * ...
+**Planned Tasks for 01/07 (Focus Area: Finishing the Documentation):**
+* Review the team's final technical documentation, making sure it includes complete result screenshots and setup instructions.
+* Sweep every AWS Region in the Console to confirm all personal lab services are fully shut down, avoiding extra charges at the end of the internship.
 
-* Demonstrated elastic performance capabilities built into active Auto Scaling Groups:
-  * Verified systems correctly identify drops below Desired Capacity levels when instances face sudden destruction.
-  * Monitored the automated launch, verification checks, and configuration integration of fresh servers without human interaction.
-  * ...
+---
 
-* Formulated resource collection management procedures to terminate multi-tier scaling stacks cleanly.
-* ...
+### Accomplishments in Week 11:
 
+* **Completed Training Path & Troubleshooting (Lab 25 & 26):**
+    * Gained solid cost-management and cloud-budget-control skills that help operate the system economically and effectively.
+    * Developed real-world troubleshooting skills, learning to diagnose and quickly resolve common cloud infrastructure issues.
+* **Group Project Delivered On Schedule:**
+    * Coordinated smoothly with the team to resolve remaining technical issues and bring the project to a polished state.
+    * Built a habit of systematic, well-coordinated work across the different infrastructure layers.
+* **Professional Cloud Engineering Practices:**
+    * Maintained strict resource-management habits on the cloud platform to optimize costs, while polishing report-writing and knowledge-documentation skills on GitHub to an enterprise standard.

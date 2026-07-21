@@ -1,43 +1,48 @@
 ---
-title: "Week 10 Worklog"
-date: 2026-07-12
+title: "Internship Worklog Week 10"
+date: 2026-06-19
 weight: 10
 chapter: false
-pre: " <b> 1.10. </b> "
+pre: "<b> 1.10. </b>"
 ---
 
-
-
 ### Week 10 Objectives:
+* Continue completing in-depth labs on performance optimization and cloud infrastructure management.
+* Actively collaborate with team members to deploy, configure, and synchronize components of the group project.
+* Package source code and prepare technical documentation for the assigned project review.
 
-* Internalize architectural concepts regarding self-healing, fault-tolerant, and elastic systems.
-* Study the cooperative relationships between Load Balancers and Auto Scaling groups.
+### Tasks Implemented This Week:
 
-### Tasks to be carried out this week:
-| Day | Task | Start Date | Completion Date | Reference Material |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Study Elastic Load Balancing (ELB) models <br>&emsp; + Application Load Balancer (ALB) handling Layer 7 traffic <br>&emsp; + Network Load Balancer (NLB) handling Layer 4 traffic | 22/06/2026 | 22/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 3   | - Deep dive into routing configuration units <br>&emsp; + Setting up Target Groups <br>&emsp; + Implementing continuous Health Check rule behaviors | 23/06/2026 | 23/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Explore automated compute capacity provisioning frameworks <br>&emsp; + Role of Amazon EC2 Auto Scaling Groups (ASG) within architectures | 24/06/2026 | 24/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Study infrastructure standardization blueprints <br>&emsp; + Creating immutable Launch Templates <br> - Analyze metric triggers that drive dynamic Scaling Policies | 25/06/2026 | 25/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - Review enterprise whitepapers detailing how production applications survive sudden traffic bottlenecks using automated scaling tools | 26/06/2026 | 26/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| Day | Task Details | Start Date | Completion Date | Reference Material |
+| :--- | :--- | :--- | :--- | :--- |
+| **1** | **[Researching Lab 23 & Team Meeting]:** Studied Infrastructure as Code (IaC). Met with the team to divide up architecture-design tasks for the group project. | 19/06/2026 | 19/06/2026 | [AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
+| **2** | **[Practicing Lab 23 & Group Project]:** Created an AWS CloudFormation template and automatically deployed VPC infrastructure. Coordinated with the team to integrate the shared networking module. | 20/06/2026 | 20/06/2026 | [AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
+| **3** | **[Researching Lab 24]:** Studied cloud caching optimization methods and how Amazon ElastiCache works. | 21/06/2026 | 21/06/2026 | [AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
+| **4** | **[Practicing Lab 24 & Group Project]:** Deployed a Redis/Memcached cluster on ElastiCache. Supported the team in configuring secure database connections between virtual-server components. | 22/06/2026 | 22/06/2026 | [AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
+| **5** | **[Group Project]:** Met with the whole team to assemble the project components together and test the full system for connectivity issues. | 23/06/2026 | 23/06/2026 | [AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
+| **6** | **[Finalizing the Group Deliverable]:** Co-wrote the instruction documentation, captured screenshots of the successful run, and tore down individual lab servers to save credit. | 24/06/2026 | 24/06/2026 | [AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
 
+---
 
-### Week 10 Achievements:
+### Daily Progress Details
 
-* Mastered core industry design definitions underlying advanced cloud systems:
-  * Scalability (Modifying resource footprints horizontally or vertically).
-  * High Availability (Ensuring services remain continuously active without single failure points).
-  * Elasticity (Automatically shrinking or expanding allocations according to active load parameters).
-  * ...
+**Tasks Completed on 23/06 (Focus Area: Group Project Progress):**
+* Worked with teammates to connect the application layer to the database layer so the whole system ran smoothly end to end.
+* Diagnosed and fixed several Security Group port-blocking issues between teammates' servers so that data could flow between them without errors.
 
-* Acquired deep comprehension regarding intelligent public web traffic distribution methods:
-  * Contrasted path-aware Layer 7 ALB systems with high-throughput Layer 4 NLB protocols.
-  * Evaluated server isolation sequences driven by automated recurring Health Check features.
-  * ...
+**Planned Tasks for 24/06 (Focus Area: Group Project Documentation):**
+* Coordinate on finishing the technical write-up for the group project, and push shared configuration files to the team's Git repository.
+* Return to the AWS Console to shut down leftover personal EC2 instances and lab services from previous days to protect the Free Tier/credit balance.
 
-* Understood batch duplication workflows used to preserve infrastructure uniformity:
-  * Handled Launch Templates to provide consistent runtime environments for newly generated instances.
-  * Analyzed hardware utilization thresholds (CPU/RAM metrics) required to trigger proper capacity expansions.
-* ...
+---
 
+### Accomplishments in Week 10:
+
+* **Automated Infrastructure & Caching Technology (Lab 23 & 24):**
+    * Mastered deploying systems via source code, speeding up large-scale environment setup through structured template files.
+    * Developed skills optimizing application read/write performance and reducing query latency by introducing caching layers.
+* **Technical Teamwork:**
+    * Strengthened effective technical communication and coordination while integrating a complex distributed system with other team members.
+    * Gained a broad architectural perspective, learning to sync individual work with the team's overall progress.
+* **Standardized Engineering Process & Resource Management:**
+    * Developed skills packaging source code and building coordinated technical documentation to real-world operating standards, while consistently releasing personal lab environments and syncing logs to GitHub.

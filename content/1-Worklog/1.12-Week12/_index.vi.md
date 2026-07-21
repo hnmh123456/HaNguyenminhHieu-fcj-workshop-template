@@ -1,42 +1,49 @@
 ---
-title: "Worklog Tuần 12"
-date: 2026-07-12
+title: "Nhật ký thực tập Tuần 12"
+date: 2026-07-03
 weight: 12
 chapter: false
-pre: " <b> 1.12. </b> "
+pre: "<b> 1.12. </b>"
 ---
 
+### Mục tiêu Tuần 12:
+* Bảo vệ thành công báo cáo kết quả thực tập cuối kỳ trước hội đồng và cán bộ hướng dẫn doanh nghiệp.
+* Hoàn tất các thủ tục kỹ thuật cuối cùng, đóng gói toàn bộ hồ sơ và bàn giao hạ tầng.
+* Tổng kết chặng đường thực tập, tiếp nhận đánh giá chuyên môn và chính thức hoàn thành chương trình.
 
+### Danh sách công việc thực hiện:
 
-### Mục tiêu tuần 12:
+| Ngày | Nhiệm vụ | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| :--- | :--- | :--- | :--- | :--- |
+| **1** | **[Chuẩn bị slide]:** Xây dựng slide báo cáo tổng kết, cô đọng chuỗi kết quả 22 bài Lab và các giải pháp hạ tầng đám mây cốt lõi. | 03/07/2026 | 03/07/2026 | FCJ Evaluation Criteria |
+| **2** | **[Báo cáo thử]:** Thực hiện các phiên thuyết trình thử nghiệm cá nhân, tối ưu hóa thời gian báo cáo và chuẩn bị kịch bản câu hỏi phản biện. | 04/07/2026 | 04/07/2026 | FCJ Evaluation Criteria |
+| **3** | **[Bảo vệ cuối kỳ]:** Báo cáo chính thức kết quả thực tập trước cán bộ hướng dẫn và hội đồng đánh giá chuyên môn của chương trình. | 05/07/2026 | 05/07/2026 | FCJ Evaluation Criteria |
+| **4** | **[Bàn giao sản phẩm]:** Tổng hợp và bàn giao toàn bộ tài liệu kỹ thuật, sơ đồ kiến trúc hệ thống mạng và kho lưu trữ mã nguồn cho đơn vị. | 06/07/2026 | 06/07/2026 | FCJ Operations Manual |
+| **5** | **[Kiểm tra tài khoản]:** Thực hiện rà soát tổng thể lần cuối hệ thống AWS Management Console, đảm bảo tất cả tài nguyên đã được tắt vĩnh viễn. | 07/07/2026 | 07/07/2026 | AWS Billing Dashboard |
+| **6** | **[Hoàn thành thủ tục]:** Tiếp nhận phiếu đánh giá kết quả thực tập từ doanh nghiệp, hoàn tất hồ sơ và chính thức đóng khóa thực tập GitHub. | 08/07/2026 | 08/07/2026 | FCJ Completion Form |
 
-* Tiếp cận mô hình kiến trúc hiện đại Điện toán không máy chủ Serverless (AWS Lambda).
-* Tổng kết toàn bộ lộ trình kiến thức thực tập và đóng gói hoàn thiện sản phẩm trang web báo cáo kết quả trực tuyến (Lab 7 & Wrap-up).
+---
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Tìm hiểu mô hình điện toán không máy chủ Serverless <br>&emsp; + AWS Lambda cơ bản <br>&emsp; + Khái niệm kiến trúc hướng sự kiện (Event-driven Architecture) <br>&emsp; + Amazon API Gateway | 06/07/2026   | 06/07/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 3   | - **Thực hành (Phần 1):** <br>&emsp; + Lập trình viết một hàm AWS Lambda cơ bản bằng ngôn ngữ Python <br>&emsp; + Cấu hình Event Trigger tự động kích hoạt hàm khi có file mới đẩy vào Amazon S3 | 07/07/2026   | 07/07/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - **Thực hành (Phần 2):** <br>&emsp; + Thực hiện upload file ảnh lên S3 <br>&emsp; + Truy cập Amazon CloudWatch theo dõi nhật ký thực thi logs hành vi <br>&emsp; + Thực hiện dọn dẹp các tài nguyên | 08/07/2026   | 08/07/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Kiểm tra, rà soát toàn bộ tệp tin nội dung văn bản `.md` từ tuần 1 đến tuần 12 trong thư mục content của mã nguồn báo cáo | 09/07/2026   | 09/07/2026      | |
-| 6   | - Thực thi câu lệnh biên dịch hệ thống `hugo` tĩnh <br> - Đóng gói thư mục sản phẩm `public` và tiến hành triển khai đẩy lên môi trường trực tuyến thành công | 10/07/2026   | 10/07/2026      | |
+### Chi tiết tiến độ hằng ngày (Cập nhật: 08/07/2026)
 
-### Kết quả đạt được tuần 12:
+**Nội dung đã thực hiện ngày 07/07 (Trọng tâm: Rà soát tài nguyên):**
+* Hoàn thành việc truy cập vào tất cả các vùng hệ thống (Regions) trên AWS Console để kiểm tra trạng thái hoạt động của máy chủ và kho lưu trữ dữ liệu.
+* Đảm bảo toàn bộ các cụm tài nguyên từ EC2, EFS, VPC nâng cao đến các hàm Serverless đã được giải phóng 100%, không còn bất kỳ dịch vụ chạy ngầm nào có khả năng phát sinh chi phí ngoài ý muốn.
 
-* Làm chủ tư duy xây dựng giải pháp công nghệ không máy chủ (Serverless Paradigm):
-  * Hiểu cơ chế vận hành tối ưu chi phí tuyệt đối khi code chỉ chạy và tính tiền theo từng mili-giây khi có sự kiện kích hoạt kích duyệt
-  * Loại bỏ hoàn toàn gánh nặng kỹ thuật về việc quản lý và cập nhật bản vá hệ điều hành cho máy chủ máy ảo nền
-  * ...
+**Kế hoạch ngày 08/07 (Trọng tâm: Hoàn thành thủ tục):**
+* Thực hiện tiếp nhận kết quả nhận xét kỹ thuật chính thức và điểm số đánh giá năng lực từ cán bộ hướng dẫn chuyên môn tại đơn vị.
+* Tiến hành lưu trữ phiên bản cuối cùng của toàn bộ tệp tin nhật ký thực tập, cấu hình trạng thái Read-Only cho kho lưu trữ mã nguồn trên GitHub để chính thức nghiệm thu kết thúc kỳ thực tập.
 
-* Triển khai xây dựng thành công ứng dụng tự động hóa hướng sự kiện:
-  * Tạo lập hoàn chỉnh hàm xử lý tự động AWS Lambda bằng mã lệnh Python kết nối trực tiếp với cổng tài nguyên lưu trữ Amazon S3
-  * Thành thục kỹ năng phân tích và giám sát gỡ lỗi hệ thống thông qua công cụ thu thập log tập trung Amazon CloudWatch
-  * ...
+---
 
-* Hoàn thành trọn vẹn tiến trình xây dựng báo cáo chuyên nghiệp:
-  * Hệ thống hóa toàn bộ chuỗi số liệu hoạt động, kiến thức kỹ thuật tích lũy xuyên suốt 12 tuần đồng hành cùng chương trình Cloud Journey
-  * Biên dịch thành công mã nguồn thô sang trang web tài liệu tĩnh hoàn chỉnh bằng Hugo framework
-  * Triển khai phân phối sản phẩm báo cáo lên môi trường mạng trực tuyến, tạo lập thành công đường link xem báo cáo trực quan gửi đến người hướng dẫn đánh giá nghiệm thu đợt thực tập
-* ...
+### Kết quả đạt được trong Tuần 12:
 
+* **Bảo vệ thành công kết quả thực tập (Báo cáo cuối kỳ):**
+    * Trình bày xuất sắc toàn bộ chặng đường học hỏi và chuỗi kết quả thực hành kỹ thuật, chứng minh được năng lực làm chủ các giải pháp hạ tầng đám mây nâng cao.
+    * Phản biện tự tin, mạch lạc trước các câu hỏi chuyên môn sâu của hội đồng đánh giá về kiến trúc mạng và giải pháp an toàn thông tin Cloud.
+* **Hoàn thiện quy trình bàn giao chuẩn doanh nghiệp:**
+    * Thực hiện bàn giao sản phẩm kỹ thuật một cách khoa học, rõ ràng và đầy đủ theo đúng quy định vận hành của đơn vị hướng dẫn.
+    * Đảm bảo hệ thống tài khoản đám mây được dọn dẹp sạch sẽ tuyệt đối, không để lại bất kỳ rủi ro tài chính hay rò rỉ bảo mật nào sau khi kết thúc.
+* **Tổng kết năng lực kỹ sư Cloud chuyên nghiệp:**
+    * Tích lũy trọn vẹn tư duy thiết kế hệ thống, kỹ năng cấu hình thực tế và năng lực tối ưu hóa chi phí vận hành hạ tầng trên AWS.
+    * Xây dựng được tác phong làm việc chuẩn mực, hoàn thành xuất sắc 100% mục tiêu của chương trình First Cloud Journey ban đầu đặt ra.
